@@ -1,3 +1,6 @@
 # Summary
 
-* [First Chapter](chapter1.md)
+* [Introduction](README.md)
+* [Depth First Search](chapter1.md)
+  * [String Permutation](chapter1/string-permutation.md)
+
