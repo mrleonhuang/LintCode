@@ -1,6 +1,6 @@
 # 630. Knight Shortest Path II
 
-> Given a knight in a chessboard `n * m `\(a binary matrix with 0 as empty and 1 as barrier\). the knight initialze position is`(0, 0)`and he wants to reach position`(n - 1, m - 1)`, Knight can only be from left to right. Find the shortest path to the destination position, return the length of the route. Return`-1 `if knight can not reached.
+> Given a knight in a chessboard `n * m`\(a binary matrix with 0 as empty and 1 as barrier\). the knight initialze position is`(0, 0)`and he wants to reach position`(n - 1, m - 1)`, Knight can only be from left to right. Find the shortest path to the destination position, return the length of the route. Return`-1`if knight can not reached.
 >
 > **Clarification**
 >
@@ -11,7 +11,6 @@
 > (x - 1, y + 2)
 > (x + 2, y + 1)
 > (x - 2, y + 1)
->
 > ```
 >
 > **Example**
@@ -36,7 +35,9 @@
 
 * **对于每一个坐标点，找能跳到本坐标点的前一个坐标，如果前一个坐标可达，则**
 
-             **dp\[i\]\[j\]=Math.min\(dp\[i\]\[j\],pre-step-dp\[i\]\[j\]+1\)**
+  ```java
+         dp[i][j] = Math.min(dp[i][j], pre-step-dp[i][j] + 1);
+  ```
 
 * **错误点：递推的顺序要注意，从左到右，因此第一层遍历 j 第二层才遍历 i 并且 j 从1开始**
 
@@ -48,7 +49,7 @@ public class Solution {
      */
     private int n;
     private int m;
-    
+
     public int shortestPath2(boolean[][] grid) {
         // Write your code here
         if (grid == null || grid.length == 0 || grid[0].length == 0) {
@@ -88,7 +89,7 @@ public class Solution {
         }
         return dp[n - 1][m - 1];
     }
-    
+
     private boolean inBound(int x, int y) {
         return x >= 0 && x < n && y >= 0 && y < m;
     }

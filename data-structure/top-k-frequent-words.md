@@ -24,7 +24,7 @@
 >
 > for k =`4`, return`["code", "lint", "baby", "yes"]`,
 
-**HashMap计数 + maxHeap排序, 用HashMap统计每一个单词的频率。然后组建一个Pair扔进PriorityQueue来进行排序。**
+**方法1：HashMap计数 + maxHeap排序, 用HashMap统计每一个单词的频率。然后组建一个Pair扔进PriorityQueue来进行排序。**
 
 * **如果频率不同，则按照频率排序；如果频率相同，则按照alphabetical order排序**
 
@@ -43,7 +43,7 @@
 
 * **遍历Map的Entry的时候用Map.Entry&lt;String, Integer&gt;**
 
-**HashMap计数 + minHeap排序**
+**方法2：HashMap计数 + minHeap排序**
 
 * **Comparator需要改变顺序**
 
@@ -53,7 +53,7 @@
      Collections.reverse(Arrays.asList(array));
 ```
 
-**HashMap计数 + TreeMap + TreeSet**
+**方法3： HashMap计数 + TreeMap + TreeSet**
 
 * **按照频率，把相同频率的word放在一个TreeSet里**
 

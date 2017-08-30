@@ -1,6 +1,6 @@
 # 544. Top k Largest Numbers
 
-> Given an integer array, find the top _k _largest numbers in it.
+> Given an integer array, find the top \_k \_largest numbers in it.
 >
 > **Example**
 >
@@ -9,27 +9,23 @@
 
 **1.Min Heap 最小堆： PriorityQueue，把数组里的数加入queue里，保持queue里有k个元素，最后剩下的数就是最大的k个数**
 
-* **注意点1：**
+* **注意点1：PriorityQueue&lt;Integer&gt;默认是升序，如果需要降序，可以用**
 
-      **PriorirtyQueue&lt;Integer&gt;默认是小到大排序，如果需要颠倒，可以用**
+  ```java
+  PriorityQueue<Integer>queue=newPriorityQueue<Integer>(size,Collections.reverseOrder());
+  ```
 
-     **`PriorityQueue<Integer>queue=newPriorityQueue<Integer>(size,Collections.reverseOrder());`**
+  **或者自定义Comparator**
 
-      **或者自定义Comparator**
-
-    **`PriorityQueue<Integer>queue=newPriorityQueue<Integer>(size,newComparator<Integer>(){`**
-
-           **`publicintcompare(Integero1,Integer,o2){`**
-
-            **`if(o1>o2)return1;`**
-
-            **`if(o1<o2)return-1;`**
-
-            **`if(o1=o2)return0;`**
-
-       **`}`**
-
-   **`}`**
+```java
+    PriorityQueue<Integer> queue = new PriorityQueue<Integer>(size,new Comparator<Integer>(){
+        public int compare(Integer o1, Integer o2){
+            if (o1 > o2) return 1;
+            if (o1 < o2) return -1;
+            if (o1 == o2) return 0;
+        }
+    }
+```
 
 * **注意点2：当queue里有k+1个数的时候poll最小的数出来，这样才是最大的k个数。并且注意poll和插入数的前后顺序。**
 
@@ -111,7 +107,7 @@ class Solution {
         }
         return results;
     }
-    
+
     private void quickSort(int[] nums, int start, int end, int k) {
         if (start >= k || start >= end) {
             return;
