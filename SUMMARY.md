@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Binary Search](binary-search.md)
-* Binary Tree & Divide Conquer
-* Breath First Search
+* [Binary Tree & Divide Conquer](binary-tree-and-divide-conquer.md)
+* [Breath First Search](breath-first-search.md)
 * [Depth First Search](chapter1.md)
   * [String Permutation](chapter1/string-permutation.md)
   * [String Permutation II](chapter1/string-permutation-ii.md)
@@ -40,4 +40,7 @@
 * [Dynamic Programming](dynamic-programming.md)
   * [Knight Shortest Path](dynamic-programming/knight-shortest-path.md)
   * [Knight Shortest Path II ](dynamic-programming/knight-shortest-path-ii.md)
+  * [Climbing Stairs II](dynamic-programming/climbing-stairs-ii.md)
+  * [Drop Eggs](dynamic-programming/drop-eggs.md)
+  * [Drop Eggs II](dynamic-programming/drop-eggs-ii.md)
 
