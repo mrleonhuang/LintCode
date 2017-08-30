@@ -24,5 +24,18 @@
   * [Kth Smallest Numbers in Unsorted Array](two-pointers/kth-smallest-numbers-in-unsorted-array.md)
   * [Triangle Count](two-pointers/triangle-count.md)
 * [Data Structure](data-structure.md)
+  * High Five
+  * [K Closest Points](data-structure/k-closest-points.md)
+  * [Kth Largest Element II](data-structure/kth-largest-element-ii.md)
+  * [Top k Largest Numbers](data-structure/top-k-largest-numbers.md)
+  * [strStr II](data-structure/strstr-ii.md)
+  * [Flatten 2D Vector](data-structure/flatten-2d-vector.md)
+  * [Top k Largest Numbers II](data-structure/top-k-largest-numbers-ii.md)
+  * [Merge k Sorted Arrays](data-structure/merge-k-sorted-arrays.md)
+  * [Top K Frequent Words](data-structure/top-k-frequent-words.md)
+  * [Implement Stack by Two Queues](data-structure/implement-stack-by-two-queues.md)
+  * [Nested List Weight Sum](data-structure/nested-list-weight-sum.md)
+  * [Zigzag Iterator II ](data-structure/zigzag-iterator-ii.md)
+  * [Zigzag Iterator](data-structure/zigzag-iterator.md)
 * Dynamic Programming
 
