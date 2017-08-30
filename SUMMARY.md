@@ -37,5 +37,7 @@
   * [Nested List Weight Sum](data-structure/nested-list-weight-sum.md)
   * [Zigzag Iterator II ](data-structure/zigzag-iterator-ii.md)
   * [Zigzag Iterator](data-structure/zigzag-iterator.md)
-* Dynamic Programming
+* [Dynamic Programming](dynamic-programming.md)
+  * [Knight Shortest Path](dynamic-programming/knight-shortest-path.md)
+  * [Knight Shortest Path II ](dynamic-programming/knight-shortest-path-ii.md)
 
