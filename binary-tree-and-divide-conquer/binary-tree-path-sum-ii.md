@@ -53,7 +53,7 @@ public class Solution {
         dfs(root, target, buffer, 0, results);
         return results;
     }
-    
+
     private void dfs(TreeNode root, int target, List<Integer> buffer, int level, List<List<Integer>> results) {
         if (root == null) {
             return;
