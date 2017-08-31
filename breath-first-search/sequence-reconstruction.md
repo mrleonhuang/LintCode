@@ -118,47 +118,52 @@ public class Solution {
         if (org == null || seqs == null) {
             return false;
         }
-        int[] preCounts = new int[org.length + 1];
-        List[] edges = new ArrayList[org.length + 1];
-        for (int i = 1; i < edges.length; i++) {
-            edges[i] = new ArrayList<Integer>();
+        Map<Integer, Set<Integer>> map = new HashMap<>();
+        Map<Integer, Integer> preCounts = new HashMap<Integer, Integer>();
+        for (int num : org) {
+            map.put(num, new HashSet<Integer>());
+            preCounts.put(num, 0);
         }
-        Arrays.fill(preCounts, -1);
-        for (int i = 0; i < seqs.length; i++) {
-            int[] seq = seqs[i];
-            for (int j = 0; j < seq.length; j++) {
-                if (seq[j] <= 0 || seq[j] > org.length) {
+        int n = org.length;
+        int count = 0;
+        for (int[] seq : seqs) {
+            count += seq.length;
+            for (int num : seq) {
+                if (num <= 0 || num > n) {
                     return false;
                 }
-                preCounts[seq[j]] = preCounts[seq[j]] == -1 ? 0 : preCounts[seq[j]];
             }
-            for (int j = 0; j < seq.length - 1; j++) {
-                edges[seq[j]].add(seq[j + 1]);
-                preCounts[seq[j + 1]]++;
+            for (int i = 1; i < seq.length; i++) {
+                if (map.get(seq[i - 1]).add(seq[i])) {
+                    preCounts.put(seq[i], preCounts.get(seq[i]) + 1);
+                }
             }
+        }
+        // case: [1], []
+        if (count < n) {
+            return false;
         }
         Queue<Integer> queue = new LinkedList<Integer>();
-        int length = 0;
-        for (int i = 1; i < preCounts.length; i++) {
-            if (preCounts[i] == 0) {
-                queue.offer(i);
+        for (Map.Entry<Integer, Integer> entry : preCounts.entrySet()) {
+            if (entry.getValue() == 0) {
+                queue.offer(entry.getKey());
             }
         }
-        while (!queue.isEmpty()) {
-            if (queue.size() > 1) {
-                return false;
-            }
-            int head = (int) queue.poll();
-            length++;
-            for (int i = 0; i < edges[head].size(); i++) {
-                int next = (int) edges[head].get(i);
-                preCounts[next]--;
-                if (preCounts[next] == 0) {
+        int cnt = 0;
+        while (queue.size() == 1) {
+            int head = queue.poll();
+            for (int next : map.get(head)) {
+                preCounts.put(next, preCounts.get(next) - 1);
+                if (preCounts.get(next) == 0) {
                     queue.offer(next);
                 }
             }
+            if (head != org[cnt]) {
+                return false;
+            }
+            cnt++;
         }
-        return length == org.length;
+        return cnt == org.length;
     }
 }
 ```
