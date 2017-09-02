@@ -25,7 +25,7 @@
   * [Inorder Successor in Binary Search Tree ](binary-tree-and-divide-conquer/inorder-successor-in-binary-search-tree.md)
   * [Convert Binary Search Tree to Doubly Linked List](binary-tree-and-divide-conquer/convert-binary-search-tree-to-doubly-linked-list.md)
   * [Binary Tree Path Sum III ](binary-tree-and-divide-conquer/binary-tree-path-sum-iii.md)
-* [Breath First Search](breath-first-search.md)
+* [BFS](breath-first-search.md)
   * [Search Graph Nodes](breath-first-search/search-graph-nodes.md)
   * [Zombie in Matrix ](breath-first-search/zombie-in-matrix.md)
   * Build Post Office II
@@ -37,7 +37,7 @@
   * [Smallest Rectangle Enclosing Black Pixels](breath-first-search/smallest-rectangle-enclosing-black-pixels.md)
   * [Build Post Office](breath-first-search/build-post-office.md)
   * [Number of Islands II](breath-first-search/number-of-islands-ii.md)
-* [Depth First Search](depth-first-search.md)
+* [DFS](depth-first-search.md)
   * [String Permutation](depth-first-search/string-permutation.md)
   * [String Permutation II](depth-first-search/string-permutation-ii.md)
 * [Linked List & Array](linked-list-and-array.md)
