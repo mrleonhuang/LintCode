@@ -37,7 +37,7 @@
   * [Smallest Rectangle Enclosing Black Pixels](breath-first-search/smallest-rectangle-enclosing-black-pixels.md)
   * [Build Post Office](breath-first-search/build-post-office.md)
   * [Number of Islands II](breath-first-search/number-of-islands-ii.md)
-* [Depth First Search](chapter1.md)
+* [Depth First Search1](chapter1.md)
   * [String Permutation](chapter1/string-permutation.md)
   * [String Permutation II](chapter1/string-permutation-ii.md)
 * [Linked List & Array](linked-list-and-array.md)
@@ -76,4 +76,7 @@
   * [Climbing Stairs II](dynamic-programming/climbing-stairs-ii.md)
   * [Drop Eggs](dynamic-programming/drop-eggs.md)
   * [Drop Eggs II](dynamic-programming/drop-eggs-ii.md)
+* [Depth First Search](depth-first-search.md)
+  * [String Permutation](depth-first-search/string-permutation.md)
+  * [String Permutation II](depth-first-search/string-permutation-ii.md)
 
