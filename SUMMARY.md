@@ -11,6 +11,7 @@
   * [Smallest Rectangle Enclosing Black Pixels](binary-search/smallest-rectangle-enclosing-black-pixels.md)
   * [Sqrt\(x\) II](binary-search/sqrtx-ii.md)
   * [Binary Tree Longest Consecutive Sequence](binary-search/binary-tree-longest-consecutive-sequence.md)
+  * [Search a 2D Matrix](binary-search/search-a-2d-matrix.md)
 * [Binary Tree & Divide Conquer](binary-tree-and-divide-conquer.md)
   * [Subtree with Maximum Average](binary-tree-and-divide-conquer/subtree-with-maximum-average.md)
   * [Minimum Subtree](binary-tree-and-divide-conquer/minimum-subtree.md)
