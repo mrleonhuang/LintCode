@@ -10,7 +10,7 @@
 >
 > Given`[1, 2, 3, 4, 5]`and target =`6`, return`0`.
 
-两次查找，分别找左边界和右边界。通过**A\[mid\] == target时候的指针调整**和**最后判断start, end指针是否为target的顺序**，来决定本次查找是尽可能向左还是向右。
+两次查找，分别找左边界和右边界， 相当于查找first和last index的结合体。通过**A\[mid\] == target时候的指针调整**和**最后判断start, end指针是否为target的顺序**，来决定本次查找是尽可能向左还是向右。
 
 ```java
 public class Solution {
