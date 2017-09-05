@@ -11,6 +11,8 @@
   * [Smallest Rectangle Enclosing Black Pixels](binary-search/smallest-rectangle-enclosing-black-pixels.md)
   * [Sqrt\(x\) II](binary-search/sqrtx-ii.md)
   * [Search a 2D Matrix](binary-search/search-a-2d-matrix.md)
+  * [Find Minimum in Rotated Sorted Array ](binary-search/find-minimum-in-rotated-sorted-array.md)
+  * [Find Minimum in Rotated Sorted Array II](binary-search/find-minimum-in-rotated-sorted-array-ii.md)
 * [Binary Tree & Divide Conquer](binary-tree-and-divide-conquer.md)
   * [Subtree with Maximum Average](binary-tree-and-divide-conquer/subtree-with-maximum-average.md)
   * [Minimum Subtree](binary-tree-and-divide-conquer/minimum-subtree.md)
