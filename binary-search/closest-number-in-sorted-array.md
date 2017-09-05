@@ -27,35 +27,24 @@ public class Solution {
      */
     public int closestNumber(int[] A, int target) {
         // Write your code here
-        
-        if(A == null || A.length == 0) return -1;
-        if(A.length == 1) return 0;
-        
+        if (A == null || A.length == 0) {
+            return -1;
+        }
         int start = 0;
         int end = A.length - 1;
-        int mid;
-        
-        while(start + 1 < end)
-        {
-            mid = start + (end - start) / 2;
-            
-            if(A[mid] <= target)
-            {
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (A[mid] <= target) {
                 start = mid;
-            }
-            else
-            {
+            } else {
                 end = mid;
             }
         }
-        
-        int endDiff = Math.abs(A[end] - target);
-        int startDiff = Math.abs(A[start] - target);
-        
-        if(startDiff <= endDiff)
-        {
+        int left = Math.abs(A[start] - target);
+        int right = Math.abs(A[end] - target);
+        if (left <= right) {
             return start;
-        }
+        } 
         return end;
     }
 }
