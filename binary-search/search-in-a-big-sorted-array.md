@@ -31,33 +31,29 @@ public class Solution {
      */
     public int searchBigSortedArray(ArrayReader reader, int target) {
         // write your code here
-        if(reader == null || target <= 0) return -1;
-        
+        if (reader == null) {
+            return -1;
+        }
         int k = 1;
-        while(reader.get(k) < target)
-        {
-            k = 2 * k;
+        while (reader.get(k) < target) {
+            k *= 2;
         }
-        
-        int start = k / 2;
-        int end = k;
-        int mid;
-        while(start + 1 < end)
-        {
-           mid = start + (end - start) / 2;
-           
-           if(reader.get(mid) < target)
-           {
-                start = mid;    
-           }
-           else
-           {
-               end = mid;
-           }
+        int left = k / 2;
+        int right = k;
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (reader.get(mid) < target) {
+                left = mid;
+            } else {
+                right = mid;
+            }
         }
-        
-        if(reader.get(start) == target) return start;
-        if(reader.get(end) == target) return end;
+        if (reader.get(left) == target) {
+            return left;
+        }
+        if (reader.get(right) == target) {
+            return right;
+        }
         return -1;
     }
 }
