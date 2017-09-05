@@ -12,38 +12,36 @@
 >
 > For target =`6`, return -1.
 
+要找last index，所以指针尽可能往右边靠：因此当中间数等于target的时候，是把left指针往右边移动；最后判断的两根指针的值的时候先判断right指针。
+
 ```java
 public class Solution {
-    /**
+    /*
      * @param nums: An integer array sorted in ascending order
      * @param target: An integer
-     * @return an integer
+     * @return: An integer
      */
     public int lastPosition(int[] nums, int target) {
-        // Write your code here
-        
-        if(nums == null || nums.length == 0) return -1;
-        
-        int start = 0;
-        int end = nums.length - 1;
-        int mid;
-        
-        while(start + 1 < end)
-        {
-            mid = start + (end - start) / 2;
-            
-            if(nums[mid] <= target)
-            {
-                start = mid;
-            }
-            else
-            {
-                end = mid;
+        // write your code here
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+        int left = 0;
+        int right = nums.length - 1;
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] <= target) {
+                left = mid;
+            } else {
+                right = mid;
             }
         }
-        
-        if(nums[end] == target) return end;
-        else if(nums[start] == target) return start;
+        if (nums[right] == target) {
+            return right;
+        }
+        if (nums[left] == target) {
+            return left;
+        }
         return -1;
     }
 }
