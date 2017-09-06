@@ -1,6 +1,6 @@
 # 28. Search a 2D Matrix
 
-> Write an efficient algorithm that searches for a value in an_m_x_n_matrix.
+> Write an efficient algorithm that searches for a value in an\_m\_x\_n\_matrix.
 >
 > This matrix has the following properties:
 >
@@ -17,12 +17,11 @@
 >     [10, 11, 16, 20],
 >     [23, 30, 34, 50]
 > ]
->
 > ```
 >
 > Given`target = 3`, return`true`.
 
-matrix和grid的长宽是固定的矩阵，所以可以用每个坐标序列对于m的除数和余数来得到坐标x, y
+matrix和grid的长宽是固定的矩阵，所以可以用每个坐标序列对于m的除数和余数来得到坐标x, y. 同时对比与II，本题每一行没有overlap，所以可以把矩阵拉长成一个升序序列来进行二分搜索，复杂度为O\(log m\* n\)
 
 ```java
 public class Solution {

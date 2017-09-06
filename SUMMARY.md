@@ -11,6 +11,7 @@
   * [Smallest Rectangle Enclosing Black Pixels](binary-search/smallest-rectangle-enclosing-black-pixels.md)
   * [Sqrt\(x\) II](binary-search/sqrtx-ii.md)
   * [Search a 2D Matrix](binary-search/search-a-2d-matrix.md)
+  * [Search a 2D Matrix II](binary-search/search-a-2d-matrix-ii.md)
   * [Find Minimum in Rotated Sorted Array ](binary-search/find-minimum-in-rotated-sorted-array.md)
   * [Find Minimum in Rotated Sorted Array II](binary-search/find-minimum-in-rotated-sorted-array-ii.md)
   * [Find Peak Element](binary-search/find-peak-element.md)
