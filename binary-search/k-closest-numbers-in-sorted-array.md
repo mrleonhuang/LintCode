@@ -1,6 +1,6 @@
 # 460. K Closest Numbers In Sorted Array
 
-> Given a target number, a non-negative integer `k `and an integer array A sorted in ascending order, find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target. Otherwise, sorted in ascending order by number if the difference is same.
+> Given a target number, a non-negative integer `k`and an integer array A sorted in ascending order, find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target. Otherwise, sorted in ascending order by number if the difference is same.
 >
 > **Example**
 >
@@ -8,64 +8,58 @@
 >
 > Given A =`[1, 4, 6, 8]`, target =`3`and k =`3`, return`[4, 1, 6]`.
 
+用二分搜索找到距离target最近的index作为startIndex，然后用two pointers从startIndex开始往前后两个方向进行搜索，类似于merge two sorted arrays的while循环
+
 ```java
 public class Solution {
-    /**
-     * @param A an integer array
-     * @param target an integer
-     * @param k a non-negative integer
-     * @return an integer array
+    /*
+     * @param A: an integer array
+     * @param target: An integer
+     * @param k: An integer
+     * @return: an integer array
      */
     public int[] kClosestNumbers(int[] A, int target, int k) {
-        int[] result = new int[k];
-
-        if (A == null || A.length == 0) {
-            return A;
+        // write your code here
+        if (A == null || A.length == 0 || k <= 0 || A.length < k) {
+            return new int[0];
         }
-        if (k > A.length) {
-            return A;
-        }
-
-        int index = firstIndex(A, target);
-
-        int start = index - 1;
-        int end = index;
-        for (int i = 0; i < k; i++) {
-            if (start < 0) {
-                result[i] = A[end++];
-            } else if (end >= A.length) {
-                result[i] = A[start--];
+        int startIndex = findStartIndex(A, target);
+        int[] results = new int[k];
+        int index = 0;
+        results[index++] = A[startIndex];
+        int i = startIndex - 1;
+        int j = startIndex + 1;
+        while (i >= 0 && j < A.length && index < k) {
+            if (Math.abs(A[i] - target) <= Math.abs(A[j] - target)) {
+                results[index++] = A[i--];
             } else {
-                if (target - A[start] <= A[end] - target) {
-                    result[i] = A[start--];
-                } else {
-                    result[i] = A[end++];
-                }
-            }
+                results[index++] = A[j++];
+            }    
         }
-        return result;
+        while (i >= 0 && index < k) {
+            results[index++] = A[i--];
+        }
+        while (j < A.length && index < k) {
+            results[index++] = A[j++];
+        }
+        return results;
     }
-
-    static int firstIndex(int[] A, int target) {
-        int start = 0, end = A.length - 1;
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
+    
+    private int findStartIndex(int[] A, int target) {
+        int left = 0;
+        int right = A.length - 1;
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
             if (A[mid] < target) {
-                start = mid;
-            } else if (A[mid] > target) {
-                end = mid;
+                left = mid;
             } else {
-                end = mid;
+                right = mid;
             }
         }
-
-        if (A[start] >= target) {
-            return start;
+        if (Math.abs(A[left] - target) <= Math.abs(A[right] - target)) {
+            return left;
         }
-        if (A[end] >= target) {
-            return end;
-        }
-        return A.length;
+        return right;
     }
 }
 ```
