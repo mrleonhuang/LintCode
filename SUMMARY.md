@@ -66,7 +66,7 @@
   * [Kth Smallest Numbers in Unsorted Array](two-pointers/kth-smallest-numbers-in-unsorted-array.md)
   * [Triangle Count](two-pointers/triangle-count.md)
 * [Data Structure](data-structure.md)
-  * High Five
+  * [High Five](data-structure/high-five.md)
   * [K Closest Points](data-structure/k-closest-points.md)
   * [Kth Largest Element II](data-structure/kth-largest-element-ii.md)
   * [Top k Largest Numbers](data-structure/top-k-largest-numbers.md)
