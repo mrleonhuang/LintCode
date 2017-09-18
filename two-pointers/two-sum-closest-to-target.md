@@ -1,12 +1,12 @@
 # 533. Two Sum - Closest to target \[LintCode\]
 
-> Given an array`nums`of_n\_integers, find two integers in\_nums\_such that the sum is closest to a given number,\_target_.
+> Given an array`nums`of _n integers, find two integers in nums such that the sum is closest to a given number, target_.
 >
 > Return the difference between the sum of the two integers and the target.
 >
 > **Example**
 >
-> Given array`nums`=`[-1, 2, 1, -4]`, and_target_=`4`.
+> Given array`nums`=`[-1, 2, 1, -4]`, and _target_=`4`.
 >
 > The minimum difference is`1`. \(4 - \(2 + 1\) = 1\).
 
