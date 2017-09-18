@@ -53,6 +53,7 @@
   * [Insert Into a Cyclic Sorted List](linked-list-and-array/vv.md)
   * [Maximum Subarray IV](linked-list-and-array/maximum-subarray.md)
   * [Maximum Subarray V](linked-list-and-array/maximum-subarray-v.md)
+  * [Intersection of Two Arrays](linked-list-and-array/intersection-of-two-arrays.md)
 * [Two Pointers](two-pointers.md)
   * [Two Sum - Data structure design](two-pointers/two-sum-data-structure-design.md)
   * [Two Sum - Less than or equal to target ](two-pointers/two-sum-less-than-or-equal-to-target.md)
