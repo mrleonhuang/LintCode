@@ -15,6 +15,7 @@
 3. Sort 1 Array + Binary Search O\(nlogn + mlogn\)
 
 * 注意开结果数组的长度为确定的intersection的长度，而不是nums1或者nums2或者temp的长度，因为多余的长度会被默认值0填充！
+
 * 方法2当pt1和pt2所指向的数相等时，要判断是否和temp里前一个数相同，来保证不重复。
 
 ```java
@@ -101,7 +102,7 @@ class Solution {
         }
         return results;
     }
-    
+
     private boolean binarySearch(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
