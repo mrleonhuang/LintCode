@@ -1,4 +1,4 @@
-# 160. Find Minimum in Rotated Sorted Array II
+# 160. Find Minimum in Rotated Sorted Array II \[LintCode\]
 
 > Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 >

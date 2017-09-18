@@ -1,6 +1,6 @@
-# 533. Two Sum - Closest to target
+# 533. Two Sum - Closest to target \[LintCode\]
 
-> Given an array`nums`of_n_integers, find two integers in_nums_such that the sum is closest to a given number,_target_.
+> Given an array`nums`of_n\_integers, find two integers in\_nums\_such that the sum is closest to a given number,\_target_.
 >
 > Return the difference between the sum of the two integers and the target.
 >

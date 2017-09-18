@@ -1,4 +1,4 @@
-# 578. Lowest Common Ancestor III
+# 578. Lowest Common Ancestor III \[LintCode\]
 
 > Given the root and two nodes in a Binary Tree. Find the lowest common ancestor\(LCA\) of the two nodes.
 >
@@ -18,7 +18,6 @@
 > 3   7
 >    / \
 >   5   6
->
 > ```
 >
 > LCA\(3, 5\) =`4`
@@ -39,7 +38,7 @@
  *     }
  * }
  */
- 
+
 class ResultType {
     public boolean a_exist, b_exist;
     public TreeNode node;
@@ -68,13 +67,13 @@ public class Solution {
     public ResultType helper(TreeNode root, TreeNode A, TreeNode B) {
         if (root == null)
             return new ResultType(false, false, null);
-            
+
         ResultType left_rt = helper(root.left, A, B);
         ResultType right_rt = helper(root.right, A, B);
-        
+
         boolean a_exist = left_rt.a_exist || right_rt.a_exist || root == A;
         boolean b_exist = left_rt.b_exist || right_rt.b_exist || root == B;
-        
+
         if (root == A || root == B)
             return new ResultType(a_exist, b_exist, root);
 

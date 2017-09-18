@@ -1,4 +1,4 @@
-# 544. Top k Largest Numbers
+# 544. Top k Largest Numbers \[LintCode\]
 
 > Given an integer array, find the top \_k \_largest numbers in it.
 >

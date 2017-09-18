@@ -1,4 +1,4 @@
-# 551. Nested List Weight Sum
+# 551. Nested List Weight Sum \[LintCode\]
 
 > Given a nested list of integers, return the sum of all integers in the list weighted by their depth. Each element is either an integer, or a list -- whose elements may also be integers or other lists.
 >
@@ -32,7 +32,7 @@ Solution 2: BFS； 广度优先搜索List，每一次while循环的size就是当
  *     public List<NestedInteger> getList();
  * }
  */
- 
+
  // solution 1 DFS: 
 public class Solution {
     public int depthSum(List<NestedInteger> nestedList) {
@@ -54,7 +54,7 @@ public class Solution {
         }
         return sum;
     }
-    
+
     private void helper(List<NestedInteger> nestedList, int depth, Map<Integer, List<Integer>> map) {
         if (!map.containsKey(depth)) {
             map.put(depth, new ArrayList<Integer>());

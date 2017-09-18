@@ -1,6 +1,6 @@
-# 486. Merge k Sorted Arrays
+# 486. Merge k Sorted Arrays \[LintCode\]
 
-> Given _k _sorted integer arrays, merge them into one sorted array.
+> Given \_k \_sorted integer arrays, merge them into one sorted array.
 >
 > **Example**
 >
@@ -95,7 +95,7 @@ public class Solution {
         }
         return sortedList;
     }
-    
+
     private int[] helper(int[][] arrays, int start, int end) {
         if (start == end) {
             return arrays[start];
@@ -105,7 +105,7 @@ public class Solution {
         int[] array2 = helper(arrays, mid + 1, end);
         return mergeTwoArrays(array1, array2);
     }
-    
+
     private int[] mergeTwoArrays(int[] array1, int[] array2) {
         if (array1.length == 0) {
             return array2;

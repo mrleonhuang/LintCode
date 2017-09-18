@@ -1,8 +1,8 @@
-# 612. K Closest Points
+# 612. K Closest Points \[LintCode\]
 
 > Given some
 >
-> `points `and a point `origin `in two dimensional space, find `k `points out of the some points which are nearest to `origin`. Return these points sorted by distance, if they are same with distance, sorted by x-axis, otherwise sorted by y-axis.
+> `points`and a point `origin`in two dimensional space, find `k`points out of the some points which are nearest to `origin`. Return these points sorted by distance, if they are same with distance, sorted by x-axis, otherwise sorted by y-axis.
 >
 > **Example**
 >
@@ -37,7 +37,7 @@ class Pair {
         this.dist = dist;
     }
 } 
- 
+
 public class Solution {
     /**
      * @param points a list of points
@@ -73,7 +73,7 @@ public class Solution {
         }
         return results;
     }
-    
+
     private int getDistance(Point origin, Point p) {
         return (p.x - origin.x) * (p.x - origin.x) + (p.y - origin.y) * (p.y - origin.y);
     }

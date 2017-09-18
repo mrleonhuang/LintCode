@@ -1,4 +1,4 @@
-# 242. Convert Binary Tree to Linked Lists by Depth
+# 242. Convert Binary Tree to Linked Lists by Depth \[LintCode\]
 
 > Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth \(e.g., if you have a tree with depth D, you'll have D linked lists\).
 >
@@ -12,7 +12,6 @@
 >   2   3
 >  /
 > 4
->
 > ```
 >
 > return
@@ -23,7 +22,6 @@
 >   2->3->null,
 >   4->null
 > ]
->
 > ```
 
 ```java
@@ -51,13 +49,13 @@ public class Solution {
      * @return a lists of linked list
      */
     public List<ListNode> binaryTreeToLists(TreeNode root) {
-        
+
         List<ListNode> result = new ArrayList<ListNode>();
-        
+
         if(root == null){
             return result;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         int level = 1;
@@ -73,11 +71,11 @@ public class Solution {
                     listNode.next = result.get(level - 1);
                     result.set(level - 1, listNode);
                 }
-                
+
                 if(node.right != null){
                     queue.offer(node.right);
                 }
-                
+
                 if(node.left != null){
                     queue.offer(node.left);
                 }
@@ -112,20 +110,20 @@ public class Solution {
      * @return a lists of linked list
      */
     public List<ListNode> binaryTreeToLists(TreeNode root) {
-        
+
         List<ListNode> result = new ArrayList<ListNode>();
         dfs(root, 1, result);
         return result;
     }
-    
+
     private void dfs(TreeNode root, int level, List<ListNode> result){
-        
+
         if(root == null){
             return;
         }
-        
+
         ListNode listNode = new ListNode(root.val);
-        
+
         if(result.size() < level){
             result.add(listNode);
         }
@@ -133,7 +131,7 @@ public class Solution {
             listNode.next = result.get(level - 1);
             result.set(level - 1, listNode);
         }
-        
+
         dfs(root.right, level + 1, result);
         dfs(root.left, level + 1, result);
     }

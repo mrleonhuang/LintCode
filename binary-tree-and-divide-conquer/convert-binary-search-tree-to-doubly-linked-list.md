@@ -1,4 +1,4 @@
-# 378. Convert Binary Search Tree to Doubly Linked List
+# 378. Convert Binary Search Tree to Doubly Linked List \[LintCode\]
 
 > Convert a binary search tree to doubly linked list with in-order traversal.
 >
@@ -60,7 +60,7 @@ public class Solution {
         ResultType resultType = helper(root);
         return resultType.first;
     }
-    
+
     private ResultType helper(TreeNode root) {
         if (root == null) {
             return null;

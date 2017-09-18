@@ -1,4 +1,4 @@
-# 607. Two Sum - Data structure design
+# 607. Two Sum - Data structure design \[LintCode\]
 
 > Design and implement a TwoSum class. It should support the following operations:`add`and`find`.
 >
@@ -13,16 +13,14 @@
 > find(7) // return false
 > ```
 
-
-
 ```java
 public class TwoSum {
     private List<Integer> numbers;
-    
+
     public TwoSum() {
         numbers = new ArrayList<Integer>();
     }
-    
+
     // Add the number to an internal data structure.
     public void add(int number) {
         // Write your code here

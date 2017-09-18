@@ -1,4 +1,4 @@
-# 472. Binary Tree Path Sum III
+# 472. Binary Tree Path Sum III \[LintCode\]
 
 > Give a binary tree, and a target number, find all path that the sum of nodes equal to target, the path could be start and end at any node in the tree.
 >
@@ -54,7 +54,7 @@ public class Solution {
         dfs(root, target, results);
         return results;
     }
-    
+
     private void dfs(ParentTreeNode root, int target, List<List<Integer>> results) {
         if (root == null) {
             return;
@@ -64,7 +64,7 @@ public class Solution {
         dfs(root.left, target, results);
         dfs(root.right, target, results);
     }
-    
+
     private void findSum(ParentTreeNode root, 
                          ParentTreeNode from, 
                          int target, 

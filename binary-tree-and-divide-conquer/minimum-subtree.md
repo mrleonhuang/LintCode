@@ -1,4 +1,4 @@
-# 596. Minimum Subtree
+# 596. Minimum Subtree \[LintCode\]
 
 > Given a binary tree, find the subtree with minimum sum. Return the root of the subtree.
 >
@@ -16,8 +16,7 @@
 >    /   \
 >  -5     2
 >  / \   /  \
-> 0   2 -4  -5 
->
+> 0   2 -4  -5
 > ```
 >
 > return the node`1`.
@@ -44,43 +43,43 @@ class ResultType {
         this.sum = sum;
     }
 }
- 
+
 public class Solution {
     /**
      * @param root the root of binary tree
      * @return the root of the minimum subtree
      */
-     
+
     public TreeNode findSubtree(TreeNode root) {
         ResultType result = helper(root);
         return result.minSubtree;
     }
-    
+
     public ResultType helper(TreeNode node) {
-        
+
         if (node == null) {
             return new ResultType(null, Integer.MAX_VALUE, 0);
         }
-        
+
         ResultType leftResult = helper(node.left);
         ResultType rightResult = helper(node.right);
-        
+
         ResultType result = new ResultType(
             node,
             leftResult.sum + rightResult.sum + node.val,
             leftResult.sum + rightResult.sum + node.val
         );
-        
+
         if (leftResult.minSum < result.minSum) {
             result.minSum = leftResult.minSum;
             result.minSubtree = leftResult.minSubtree;
         }
-        
+
         if (rightResult.minSum < result.minSum) {
             result.minSum = rightResult.minSum;
             result.minSubtree = rightResult.minSubtree;
         }
-        
+
         return result;
     }
 }
@@ -104,25 +103,25 @@ public class Solution {
      */
     public TreeNode minSubtree;
     public int minSum = Integer.MAX_VALUE;
-     
+
     public TreeNode findSubtree(TreeNode root) {
         // Write your code here
         getSum(root);
         return minSubtree;
     }
-    
+
     private int getSum(TreeNode node)
     {
         if(node == null) return 0;
-        
+
         int sum = getSum(node.left) + getSum(node.right) + node.val;
-        
+
         if(sum < minSum)
         {
             minSubtree = node;
             minSum = sum;
         }
-        
+
         return sum;
     }
 }

@@ -1,4 +1,4 @@
-# 597. Subtree with Maximum Average
+# 597. Subtree with Maximum Average \[LintCode\]
 
 > Given a binary tree, find the subtree with maximum average. Return the root of the subtree.
 >
@@ -16,8 +16,7 @@
 >    /   \
 >  -5     11
 >  / \   /  \
-> 1   2 4    -2 
->
+> 1   2 4    -2
 > ```
 >
 > return the node`11`.
@@ -39,14 +38,14 @@ class ResultType
 {
     int sum; 
     int count;
-    
+
     public ResultType(int sum, int count)
     {
         this.sum = sum;
         this.count = count;
     }
 }
- 
+
 public class Solution {
     /**
      * @param root the root of binary tree
@@ -54,33 +53,33 @@ public class Solution {
      */
     public TreeNode maxSubtree;
     public ResultType maxResult;
-     
+
     public TreeNode findSubtree2(TreeNode root) {
         // Write your code here
         helper(root);
         return maxSubtree;
     }
-    
+
     private ResultType helper(TreeNode node)
     {
         if(node == null)
         {
             return new ResultType(0, 0);
         }
-        
+
         ResultType leftResult = helper(node.left);
         ResultType rightResult = helper(node.right);
-        
+
         int sum = leftResult.sum + rightResult.sum + node.val;
         int count = leftResult.count + rightResult.count + 1;
         ResultType result = new ResultType(sum, count);
-        
+
         if(maxSubtree == null || maxResult.sum * count < sum * maxResult.count)
         {
            maxSubtree = node;
            maxResult = result;
         }
-        
+
         return result;
     }
 }

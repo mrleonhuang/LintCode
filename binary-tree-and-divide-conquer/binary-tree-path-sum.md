@@ -1,4 +1,4 @@
-# 376. Binary Tree Path Sum
+# 376. Binary Tree Path Sum \[LintCode\]
 
 > Given a binary tree, find all paths that sum of the nodes in the path equals to a given number`target`.
 >
@@ -14,7 +14,6 @@
 >    2   4
 >   / \
 >  2   3
->
 > ```
 >
 > return
@@ -47,35 +46,35 @@ public class Solution {
      */
     public List<List<Integer>> binaryTreePathSum(TreeNode root, int target) {
         // Write your code here
-        
+
         List<List<Integer>> results = new ArrayList();
         if(root == null) return results;
-        
+
         List<Integer> path = new ArrayList();
         path.add(root.val);
         helper(root, root.val, target, path, results);
         return results;
     }
-    
+
     private void helper(TreeNode node, int sum, int target, List<Integer> path, List<List<Integer>> results){
-        
+
         if(node.left == null && node.right == null){
-            
+
             if(sum == target){
                results.add(new ArrayList<Integer>(path));
             }
             return;
         }
-        
+
         if(node.left != null){
-            
+
             path.add(node.left.val);
             helper(node.left, sum + node.left.val, target, path, results);
             path.remove(path.size() - 1);
         }
-        
+
         if(node.right != null){
-            
+
             path.add(node.right.val);
             helper(node.right, sum + node.right.val, target, path, results);
             path.remove(path.size() - 1);

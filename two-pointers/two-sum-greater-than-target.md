@@ -1,4 +1,4 @@
-# 443. Two Sum - Greater than target
+# 443. Two Sum - Greater than target \[LintCode\]
 
 > Given an array of integers, find how many pairs in the array such that their sum is bigger than a specific target number. Please return the number of pairs.
 >
@@ -35,7 +35,6 @@ public class Solution {
         return count;
     }
 }
-
 ```
 
 

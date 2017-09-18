@@ -1,8 +1,8 @@
-# 611. Knight Shortest Path
+# 611. Knight Shortest Path \[LintCode\]
 
-> Given a knight in a chessboard \(a binary matrix with `0 `as empty a `1 `as barrier\) with a `source `position, find the shortest path to a `destination `position, return the length of the route.
-
-> Return`-1 `if knight can not reached.
+> Given a knight in a chessboard \(a binary matrix with `0`as empty a `1`as barrier\) with a `source`position, find the shortest path to a `destination`position, return the length of the route.
+>
+> Return`-1`if knight can not reached.
 >
 > ##### Notice
 >
@@ -60,13 +60,13 @@ public class Solution {
      */
     public int[] dirX = new int[]{1, 1, -1, -1, 2, 2, -2, -2};
     public int[] dirY = new int[]{2, -2, 2, -2, 1, -1, 1, -1};
-     
+
     public int shortestPath(boolean[][] grid, Point source, Point destination) {
         // Write your code here
         if(grid == null || grid.length == 0 || grid[0].length == 0 || source == null || destination == null){
             return -1;
         }
-        
+
         int steps = -1;
         Queue<Point> queue = new LinkedList<Point>();
         queue.offer(source);
@@ -89,13 +89,13 @@ public class Solution {
         }
         return -1;
     }
-    
+
     private boolean isAvailableStep(boolean[][] grid, Point p){
         int n = grid.length;
         int m = grid[0].length;
         return (p.x >= 0 && p.x < n && p.y >= 0 && p.y < m && grid[p.x][p.y] == false);
     }
-    
+
     private boolean isDestination(Point p, Point dest){
         return (p.x == dest.x && p.y == dest.y);
     }

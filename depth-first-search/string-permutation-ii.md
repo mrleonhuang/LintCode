@@ -1,4 +1,4 @@
-# 10. String Permutation II
+# 10. String Permutation II \[LintCode\]
 
 > Given a string, find all permutations of it without duplicates.
 >

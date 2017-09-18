@@ -1,4 +1,4 @@
-# 474. Lowest Common Ancestor II
+# 474. Lowest Common Ancestor II \[LintCode\]
 
 > Given the root and two nodes in a Binary Tree. Find the lowest common ancestor\(LCA\) of the two nodes.
 >
@@ -16,7 +16,6 @@
 > 3   7
 >    / \
 >   5   6
->
 > ```
 >
 > LCA\(3, 5\) =`4`
@@ -45,24 +44,24 @@ public class Solution {
                                                  ParentTreeNode B) {
         // Write your code here  
         if(root == null || A == null || B == null) return null;
-        
+
         ArrayList<ParentTreeNode> pathToRoot_A = new ArrayList<ParentTreeNode>();
         ArrayList<ParentTreeNode> pathToRoot_B = new ArrayList<ParentTreeNode>();
-        
+
         ParentTreeNode current = A;
         while(current != null)
         {
             pathToRoot_A.add(current);
             current = current.parent;
         }
-        
+
         current = B;
         while(current != null)
         {
             pathToRoot_B.add(current);
             current = current.parent;
         }
-        
+
         ParentTreeNode currLCA = root;
         int i = pathToRoot_A.size() - 1;
         int j = pathToRoot_B.size() - 1;
@@ -100,12 +99,12 @@ public class Solution {
     public ParentTreeNode lowestCommonAncestorII(ParentTreeNode root,
                                                  ParentTreeNode A,
                                                  ParentTreeNode B) {
-                                                     
+
         if(root == null || A == null || B == null) return null;
-        
+
         ArrayList<ParentTreeNode> pathA = getPathToRoot(A);
         ArrayList<ParentTreeNode> pathB = getPathToRoot(B);
-        
+
         ParentTreeNode LCA = null;
         int a = pathA.size() - 1;
         int b = pathB.size() - 1;
@@ -115,14 +114,14 @@ public class Solution {
             {
                 break;
             }
-            
+
             LCA = pathA.get(a);
             a--;
             b--;
         }
         return LCA;
     }
-    
+
     private ArrayList<ParentTreeNode> getPathToRoot(ParentTreeNode node)
     {   
         ArrayList<ParentTreeNode> path = new ArrayList();
@@ -130,13 +129,13 @@ public class Solution {
         {
             return path;
         }
-        
+
         while(node != null)
         {
            path.add(node);
            node = node.parent;
         }
-        
+
         return path;
     }
 }

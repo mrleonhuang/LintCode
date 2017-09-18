@@ -1,4 +1,4 @@
-# 14. First Position of Target
+# 14. First Position of Target \[LintCode\]
 
 > For a given sorted array \(ascending order\) and a`target`number, find the first index of this number in`O(log n)`time complexity.
 >

@@ -1,4 +1,4 @@
-# 461. Kth Smallest Numbers in Unsorted Array
+# 461. Kth Smallest Numbers in Unsorted Array \[LintCode\]
 
 > Find the kth smallest numbers in an unsorted integer array.
 >
@@ -19,7 +19,6 @@
 **时间复杂度为O\(n\) ： 用O\(n\)的方法将T\(n\)的问题变成T\(n/2\)的问题。**
 
 ```java
-
 class Solution {
     /*
      * @param k an integer
@@ -33,7 +32,7 @@ class Solution {
         }
         return quickSelect(nums, 0, nums.length - 1, k - 1);
     }
-    
+
     private int quickSelect(int[] nums, int start, int end, int k) {
         int left = start;
         int right = end;

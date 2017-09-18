@@ -1,4 +1,4 @@
-# 625. Partition Array II
+# 625. Partition Array II \[LintCode\]
 
 > Partition an unsorted integer array into three parts:
 >
@@ -54,7 +54,7 @@ public class Solution {
             }
         }
     }
-    
+
     private void swap(int[] nums, int x, int y) {
         int temp = nums[x];
         nums[x] = nums[y];

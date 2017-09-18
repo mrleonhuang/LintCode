@@ -1,4 +1,4 @@
-# 601. Flatten 2D Vector
+# 601. Flatten 2D Vector \[LintCode\]
 
 > Implement an iterator to flatten a 2d vector.
 >

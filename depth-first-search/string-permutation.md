@@ -1,4 +1,4 @@
-# 211. String Permutation
+# 211. String Permutation \[LintCode\]
 
 > Given two strings, write a method to decide if one is a permutation of the other.
 >

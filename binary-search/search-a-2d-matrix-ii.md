@@ -1,4 +1,4 @@
-# 38. Search a 2D Matrix II
+# 38. Search a 2D Matrix II \[LintCode\]
 
 > Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it.
 >
@@ -18,7 +18,6 @@
 >   [2, 4, 7, 8],
 >   [3, 5, 9, 10]
 > ]
->
 > ```
 >
 > Given target =`3`, return`2`.

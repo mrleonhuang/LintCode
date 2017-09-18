@@ -1,4 +1,4 @@
-# 595. Binary Tree Longest Consecutive Sequence
+# 595. Binary Tree Longest Consecutive Sequence \[LintCode\]
 
 > Given a binary tree, find the length of the longest consecutive sequence path.
 >
@@ -16,7 +16,6 @@
 >    2   4
 >         \
 >          5
->
 > ```
 >
 > Longest consecutive sequence path is`3-4-5`, so return`3`.
@@ -29,7 +28,6 @@
 >    2    
 >   / 
 >  1
->
 > ```
 >
 > Longest consecutive sequence path is`2-3`,not`3-2-1`, so return`2`.
@@ -51,34 +49,34 @@ public class Solution {
      * @return the length of the longest consecutive sequence path
      */
     public int maxCount = 0;
-     
+
     public int longestConsecutive(TreeNode root) {
-        
+
         helper(root);
         return maxCount;
     }
-    
+
     private int helper(TreeNode node){
-        
+
         if(node == null) return 0;
-        
+
         int left = helper(node.left);
         int right = helper(node.right);
-        
+
         int subtreeMax = 1;
-        
+
         if(node.left != null && node.left.val == node.val + 1){
             subtreeMax = Math.max(subtreeMax, left + 1);
         }
-        
+
         if(node.right != null && node.right.val == node.val + 1){
             subtreeMax = Math.max(subtreeMax, right + 1);
         }
-        
+
         if(subtreeMax > maxCount){
             maxCount = subtreeMax;
         }
-        
+
         return subtreeMax;
     }
 }
@@ -98,18 +96,18 @@ public class Solution {
      * @param root the root of binary tree
      * @return the length of the longest consecutive sequence path
      */
-    
+
     public int longestConsecutive(TreeNode root) {
-        
+
         return helper(root, null, 0);
-        
+
     }
-    
+
     private int helper(TreeNode root, TreeNode parent, int lengthWithoutRoot) {
         if (root == null) {
             return 0;
         }
-        
+
         int length = (parent != null && parent.val + 1 == root.val)
             ? lengthWithoutRoot + 1
             : 1;

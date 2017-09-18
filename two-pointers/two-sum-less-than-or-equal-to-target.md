@@ -1,4 +1,4 @@
-# 609. Two Sum - Less than or equal to target
+# 609. Two Sum - Less than or equal to target \[LintCode\]
 
 > Given an array of integers, find how many pairs in the array such that their sum is
 >
@@ -46,9 +46,6 @@ public class Solution {
     }
 }
 ```
-
-  
-
 
 
 

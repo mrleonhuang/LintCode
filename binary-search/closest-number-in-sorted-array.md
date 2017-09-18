@@ -1,4 +1,4 @@
-# 459. Closest Number in Sorted Array
+# 459. Closest Number in Sorted Array \[LintCode\]
 
 > Given a target number and an integer array A sorted in ascending order, find the index`i`in A such that A\[i\] is closest to the given target.
 >

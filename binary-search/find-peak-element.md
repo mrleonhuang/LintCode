@@ -1,4 +1,4 @@
-# 75. Find Peak Element
+# 75. Find Peak Element \[LintCode\]
 
 > There is an integer array which has the following features:
 >

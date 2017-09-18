@@ -1,4 +1,4 @@
-# 574. Build Post Office
+# 574. Build Post Office \[LintCode\]
 
 > Given a 2D grid, each cell is either an house`1`or empty`0`\(the number zero, one\), find the place to build a post office, the distance that post office to all the house sum is smallest. Return the smallest distance. Return`-1`if it is not possible.
 >
@@ -15,7 +15,6 @@
 > 0 1 0 0
 > 1 0 1 1
 > 0 1 0 0
->
 > ```
 >
 > return `6`. \(Placing a post office at \(1,1\), the distance that post office to all the house sum is smallest.\)
@@ -41,13 +40,13 @@ public class Solution {
     public int m;
     public int[] dirX = {0, 0, 1, -1};
     public int[] dirY = {1, -1, 0, 0};
-    
+
     public int shortestDistance(int[][] grid) {
         // Write your code here
         if(grid == null || grid.length == 0 || grid[0].length == 0){
             return -1;
         }
-        
+
         int shortestPath = Integer.MAX_VALUE;
         this.n = grid.length;
         this.m = grid[0].length;
@@ -55,7 +54,7 @@ public class Solution {
         List<Integer> arrX = new ArrayList<Integer>();
         List<Integer> arrY = new ArrayList<Integer>();
         boolean[][] visited = new boolean[this.n][this.m];
-        
+
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
                 if(grid[i][j] == HOUSE){
@@ -65,15 +64,15 @@ public class Solution {
                 }
             }
         }
-        
+
         if(houses.size() == m * n){
             return -1;
         }
-        
+
         if(houses.size() == 0){
             return 0;
         }
-        
+
         Queue<Coordinate> queue = new LinkedList<Coordinate>();
         queue.offer(new Coordinate(getMedian(arrX), getMedian(arrY)));
         visited[getMedian(arrX)][getMedian(arrY)] = true;
@@ -98,7 +97,7 @@ public class Solution {
         }
         return -1;
     }
-    
+
     private int getMedian(List<Integer> arr){
         Collections.sort(arr);
         int median = arr.get(arr.size() / 2);
@@ -107,7 +106,7 @@ public class Solution {
         }
         return median;
     }
-    
+
     private int getDistances(Coordinate cor, List<Coordinate> houses){
         int distances = 0;
         for(Coordinate house : houses){
@@ -115,7 +114,7 @@ public class Solution {
         }
         return distances;
     }
-    
+
     private boolean isInBound(int[][] grid, Coordinate cor){
         return (cor.x >= 0 && cor.x < this.n && cor.y >= 0 && cor.y < this.m);
     }

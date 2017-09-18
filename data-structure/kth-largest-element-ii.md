@@ -1,4 +1,4 @@
-# 606. Kth Largest Element II
+# 606. Kth Largest Element II \[LintCode\]
 
 > Find K-th largest element in an array. and N is much larger than k.
 >

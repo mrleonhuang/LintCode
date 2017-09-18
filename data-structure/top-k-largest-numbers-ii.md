@@ -1,9 +1,9 @@
-# 545. Top k Largest Numbers II
+# 545. Top k Largest Numbers II \[LintCode\]
 
 > Implement a data structure, provide two interfaces:
 >
 > 1. `add(number)`. Add a new number in the data structure.
-> 2. `topk()`. Return the top _k _largest numbers in this data structure. _k _is given when we create the data structure.
+> 2. `topk()`. Return the top \_k \_largest numbers in this data structure. \_k \_is given when we create the data structure.
 >
 > **Example**
 >
@@ -32,10 +32,10 @@
 
 ```java
 public class Solution {
-    
+
     private PriorityQueue<Integer> minHeap;
     private int maxSize;
-    
+
     public Solution(int k) {
         // initialize your data structure here.
         minHeap = new PriorityQueue<Integer>(k + 1);

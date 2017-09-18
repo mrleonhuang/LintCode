@@ -1,4 +1,4 @@
-# 494. Implement Stack by Two Queues
+# 494. Implement Stack by Two Queues \[LintCode\]
 
 > Implement a stack by two queues. The queue is first in first out \(FIFO\). That means you can not directly pop the last element in a queue.
 >
@@ -28,12 +28,12 @@
 class Stack {
     private Queue<Integer> queue1;
     private Queue<Integer> queue2;
-    
+
     public Stack() {
         queue1 = new LinkedList<Integer>();
         queue2 = new LinkedList<Integer>();
     }
-    
+
     // Push a new item into the stack
     public void push(int x) {
         // Write your code here

@@ -1,4 +1,4 @@
-# 600. Smallest Rectangle Enclosing Black Pixels
+# 600. Smallest Rectangle Enclosing Black Pixels \[LintCode\]
 
 > An image is represented by a binary matrix with `0`as a white pixel and `1`as a black pixel. The black pixels are connected, i.e., there is only one black region. Pixels are connected horizontally and vertically. Given the location`(x, y)`of one of the black pixels, return the area of the smallest \(axis-aligned\) rectangle that encloses all black pixels.
 >
@@ -38,7 +38,7 @@ public class Solution {
         int lowerBound = findLowerBound(image, x, image.length - 1);
         return (rightBound - leftBound + 1) * (lowerBound - upperBound + 1);
     }
-    
+
     private int findLeftBound(char[][] image, int left, int right) {
         while (left + 1 < right) {
             int mid = left + (right - left) / 2;
@@ -53,7 +53,7 @@ public class Solution {
         }
         return right;
     }
-    
+
     private int findRightBound(char[][] image, int left, int right) {
         while (left + 1 < right) {
             int mid = left + (right - left) / 2;
@@ -68,7 +68,7 @@ public class Solution {
         }
         return left;
     }
-    
+
     private int findUpperBound(char[][] image, int up, int down) {
         while (up + 1 < down) {
             int mid = up + (down - up) / 2;
@@ -83,7 +83,7 @@ public class Solution {
         }
         return down;
     }
-    
+
     private int findLowerBound(char[][] image, int up, int down) {
         while (up + 1 < down) {
             int mid = up + (down - up) / 2;
@@ -98,7 +98,7 @@ public class Solution {
         }
         return up;
     }
-    
+
     private boolean existBlackInCol(char[][] image, int y) {
         for (int i = 0; i < image.length; i++) {
             if (image[i][y] == '1') {
@@ -107,7 +107,7 @@ public class Solution {
         }
         return false;
     }
-    
+
     private boolean existBlackInRow(char[][] image, int x) {
         for (int i = 0; i < image[0].length; i++) {
             if (image[x][i] == '1') {

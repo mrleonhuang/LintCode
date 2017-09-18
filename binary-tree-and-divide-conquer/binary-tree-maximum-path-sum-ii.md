@@ -1,4 +1,4 @@
-# 475. Binary Tree Maximum Path Sum II
+# 475. Binary Tree Maximum Path Sum II \[LintCode\]
 
 > Given a binary tree, find the maximum path sum from root.
 >
@@ -12,13 +12,11 @@
 >   1
 >  / \
 > 2   3
->
 > ```
 >
 > return`4`. \(1-&gt;3\)
 
 ```java
-
 /**
  * Definition of TreeNode:
  * public class TreeNode {
@@ -38,10 +36,10 @@ public class Solution {
     public int maxPathSum2(TreeNode root) {
         // Write your code here
         if(root == null) return 0;
-        
+
         int left = maxPathSum2(root.left);
         int right = maxPathSum2(root.right);
-        
+
         return Math.max(0, Math.max(left, right)) + root.val;
     }
 }

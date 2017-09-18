@@ -1,8 +1,8 @@
-# 594. strStr II
+# 594. strStr II \[LintCode\]
 
 > Implement`strStr`function in O\(n + m\) time.
 >
-> `strStr`return the first index of the target string in a source string. The length of the target string is_m_and the length of the source string is_n_.  
+> `strStr`return the first index of the target string in a source string. The length of the target string is_m\_and the length of the source string is\_n_.  
 > If target does not exist in source, just return -1.
 >
 > **Example**
@@ -73,7 +73,6 @@ public class Solution {
         return -1;    
     }
 }
-
 ```
 
 

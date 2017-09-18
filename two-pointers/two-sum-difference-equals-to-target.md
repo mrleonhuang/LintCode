@@ -1,8 +1,8 @@
-# 610. Two Sum - Difference equals to target
+# 610. Two Sum - Difference equals to target \[LintCode\]
 
 > Given an array of integers, find two numbers that their
 >
-> `difference `
+> `difference`
 >
 > equals to a target value. where index1 must be less than index2. Please note that your returned answers \(both index1 and index2\) are NOT zero-based.
 
