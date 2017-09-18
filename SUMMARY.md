@@ -20,6 +20,7 @@
   * [Search in Rotated Sorted Array](binary-search/search-in-rotated-sorted-array.md)
   * [Search in Rotated Sorted Array II ](binary-search/search-in-rotated-sorted-array-ii.md)
   * [First Position of Target](binary-search/first-position-of-target.md)
+  * [Two Sum II - Input array is sorted](binary-search/two-sum-ii-input-array-is-sorted.md)
 * [Binary Tree & Divide Conquer](binary-tree-and-divide-conquer.md)
   * [Subtree with Maximum Average](binary-tree-and-divide-conquer/subtree-with-maximum-average.md)
   * [Minimum Subtree](binary-tree-and-divide-conquer/minimum-subtree.md)
