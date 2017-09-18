@@ -6,7 +6,7 @@
 >
 > equals to a target value. where index1 must be less than index2. Please note that your returned answers \(both index1 and index2\) are NOT zero-based.
 
-**比普通Two Sum多考虑一种情况，同时考虑nums\[i\] + target 和 nums\[i\] - target是否已经存在。\**
+比普通Two Sum多考虑一种情况，同时考虑nums\[i\] + target 和 nums\[i\] - target是否已经存在。
 
 ```java
 public class Solution {

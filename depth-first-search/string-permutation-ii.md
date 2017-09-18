@@ -8,17 +8,17 @@
 >
 > Given`"aabb"`, return`["aabb", "abab", "baba", "bbaa", "abba", "baab"]`.
 
-* **类似于Permutation II，不同点在于全排列不是List是String**
+* 类似于Permutation II，不同点在于全排列不是List是String
 
-* **将String排序的方法：str.toCharArray\(\) → Arrays.sort\(charArr\)**
+* 将String排序的方法：str.toCharArray\(\) → Arrays.sort\(charArr\)
 
-* **dfs遍历，将char临时存在List&lt;Character&gt;中，最后再用StringBuilder构建String**
+* dfs遍历，将char临时存在List&lt;Character&gt;中，最后再用StringBuilder构建String
 
       **`dfs(char[]arr,boolean[]used,List<Character>permutation,List<String>results)`**
 
-* **去重机制与Permutation II一样，用boolean数组记录元素是否使用，并且用去重三要素杀手锏（排序+startIndex+比较）**
+* 去重机制与Permutation II一样，用boolean数组记录元素是否使用，并且用去重三要素杀手锏（排序+startIndex+比较）
 
-* **错误：String为null和长度为0情况不一样，dfs搜索易错点**
+* 错误：String为null和长度为0情况不一样，dfs搜索易错点
 
 ```java
 public class Solution {

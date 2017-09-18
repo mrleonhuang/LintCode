@@ -20,13 +20,13 @@
 >
 > Actually we don't care about what you place in`?`, we only care about the part which has no duplicate integers.
 
-**要把所有unique的元素顶到数组的最前面，这种情况肯定不能数组整体移动！！**
+要把所有unique的元素顶到数组的最前面，这种情况肯定不能数组整体移动！！
 
-**两种方法：**
+两种方法：
 
-1. **O\(n\)时间 + O\(n\)空间：遍历数组元素加进HashSet，自动得到所有unique元素，再拷贝回原数组。**
+1. O\(n\)时间 + O\(n\)空间：遍历数组元素加进HashSet，自动得到所有unique元素，再拷贝回原数组。
 
-2. **O\(nlogn\)时间： 将数组排序，所以重复元素会挤在一起。用一根指针index代表unique元素的最后位置，用for循环的i走在前面跟index元素作比较，如果一样，则i继续走，否则将i元素拷贝到index指针的下一位（方法巧妙没想到！！）**
+2. O\(nlogn\)时间： 将数组排序，所以重复元素会挤在一起。用一根指针index代表unique元素的最后位置，用for循环的i走在前面跟index元素作比较，如果一样，则i继续走，否则将i元素拷贝到index指针的下一位（方法巧妙没想到！！）
 
 ```java
 // solution 1

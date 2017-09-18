@@ -21,9 +21,9 @@
 > [4(2),4(3),4(4)]
 > ```
 
-**组成三角形的条件：两个小边之和大于第三边。**
+组成三角形的条件：两个小边之和大于第三边。
 
-**将数组排序后，问题变成Two Sum - Greater than target （巧妙）**
+将数组排序后，问题变成Two Sum - Greater than target （巧妙）
 
 ```java
 public class Solution {

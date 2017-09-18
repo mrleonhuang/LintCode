@@ -14,9 +14,9 @@
 > 7 + 11 &lt; 24  
 > 7 + 15 &lt; 25
 
-**先排序：**
+先排序：
 
-**如果当前nums\[left\] + nums\[right\] &lt;= target, 说明在当前left的位置，加上right指针这么大的数都是符合条件的，那么加上right指针所有左边的数肯定都是符合条件的。因此count += right - left.**
+如果当前nums\[left\] + nums\[right\] &lt;= target, 说明在当前left的位置，加上right指针这么大的数都是符合条件的，那么加上right指针所有左边的数肯定都是符合条件的。因此count += right - left.
 
 ```java
 public class Solution {

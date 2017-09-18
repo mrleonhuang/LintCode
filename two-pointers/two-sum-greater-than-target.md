@@ -6,7 +6,7 @@
 >
 > Given numbers =`[2, 7, 11, 15]`, target =`24`. Return`1`. \(11 + 15 is the only pair\)
 
-**和Less than or equals to 思路一样**
+和Less than or equals to 思路一样
 
 ```java
 public class Solution {

@@ -6,7 +6,7 @@
 >
 > `abcd`is a permutation of`bcad`, but`abbe`is not a permutation of`abe`
 
-**用数组来记录第一个String中每一个char的出现频率，然后遍历第二个String把出现的char的从数组中减去。如果刚好数组中每一个char的频率都是0，说明是permutation.**
+用数组来记录第一个String中每一个char的出现频率，然后遍历第二个String把出现的char的从数组中减去。如果刚好数组中每一个char的频率都是0，说明是permutation.
 
 ```java
 public class Solution {

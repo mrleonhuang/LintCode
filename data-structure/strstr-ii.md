@@ -9,17 +9,17 @@
 >
 > Given source =`abcdef`, target =`bcd`, return`1`.
 
-**维护一个HashMap&lt;Character, LinkedList&lt;Integer&gt;&gt;来记录source中所有char出现的index，如果target中的字母在HashMap里对应的queue中index是连续 +1 的，说明存在并返回第一个字母的index**
+维护一个HashMap&lt;Character, LinkedList&lt;Integer&gt;&gt;来记录source中所有char出现的index，如果target中的字母在HashMap里对应的queue中index是连续 +1 的，说明存在并返回第一个字母的index
 
-**错误：**
+错误：
 
-* **HashMap中存char用它对应的类Character**
+* HashMap中存char用它对应的类Character
 
-* **边界条件判断，如果target的长度是0，是所有String的subString，返回0，类似空集是所有集合的子集**
+* 边界条件判断，如果target的长度是0，是所有String的subString，返回0，类似空集是所有集合的子集
 
-* **每次遍历target的字母时候，在HashMap中找出对应queue，要看头元素是否比当前连续的index要小，如果小的话就poll出来**
+* 每次遍历target的字母时候，在HashMap中找出对应queue，要看头元素是否比当前连续的index要小，如果小的话就poll出来
 
-**技巧：判断for循环是break出来的还是自然循环结束的，用 i 是否 == length来判断**
+技巧：判断for循环是break出来的还是自然循环结束的，用 i 是否 == length来判断
 
 ```java
 public class Solution {

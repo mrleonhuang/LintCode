@@ -16,13 +16,13 @@
 > return[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].
 > ```
 
-**与Merge K Sorted Lists类似。**
+与Merge K Sorted Lists类似。
 
-1. **Heap \(PriorityQueue\) + HashMap，HashMap中记录每一个array下一个插入元素的index**
+1. Heap \(PriorityQueue\) + HashMap，HashMap中记录每一个array下一个插入元素的index
 
-2. **递归Merge Two Sorted Arrays**
+2. 递归Merge Two Sorted Arrays
 
-3. **Merge Two By Two不好写，因为数组的长度是固定的，不好像list那样可以判断长度来决定merge与否。**
+3. Merge Two By Two不好写，因为数组的长度是固定的，不好像list那样可以判断长度来决定merge与否。
 
 ```java
 // solution 1

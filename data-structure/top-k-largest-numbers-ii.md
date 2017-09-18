@@ -26,9 +26,9 @@
 > >>return [1000, 100, 10]
 > ```
 
-**定义一个private变量maxSize记录k是多少**
+定义一个private变量maxSize记录k是多少
 
-**注意用Iterator的时候如果不定义Iterator&lt;Integer&gt;那么返回值将会是一个Object**
+注意用Iterator的时候如果不定义Iterator&lt;Integer&gt;那么返回值将会是一个Object
 
 ```java
 public class Solution {

@@ -24,9 +24,9 @@
 >
 > for k =`4`, return`["code", "lint", "baby", "yes"]`,
 
-**方法1：HashMap计数 + maxHeap排序, 用HashMap统计每一个单词的频率。然后组建一个Pair扔进PriorityQueue来进行排序。**
+方法1：HashMap计数 + maxHeap排序, 用HashMap统计每一个单词的频率。然后组建一个Pair扔进PriorityQueue来进行排序。
 
-* **如果频率不同，则按照频率排序；如果频率相同，则按照alphabetical order排序**
+* 如果频率不同，则按照频率排序；如果频率相同，则按照alphabetical order排序
 
 ```java
        Comparator<Pair> pairComparator = new Comparator<Pair>() {
@@ -39,25 +39,25 @@
     }
 ```
 
-* **如果自定义的class中的attributes设置为private的话，在comparator中就不能访问到，所以如果需要访问attribute来构建comparator的话，atrribute不能设置为private**
+* 如果自定义的class中的attributes设置为private的话，在comparator中就不能访问到，所以如果需要访问attribute来构建comparator的话，atrribute不能设置为private
 
-* **遍历Map的Entry的时候用Map.Entry&lt;String, Integer&gt;**
+* 遍历Map的Entry的时候用Map.Entry&lt;String, Integer&gt;
 
-**方法2：HashMap计数 + minHeap排序**
+方法2：HashMap计数 + minHeap排序
 
-* **Comparator需要改变顺序**
+* Comparator需要改变顺序
 
-* **Reverse Array:**
+* Reverse Array:
 
 ```java
      Collections.reverse(Arrays.asList(array));
 ```
 
-**方法3： HashMap计数 + TreeMap + TreeSet**
+方法3： HashMap计数 + TreeMap + TreeSet
 
-* **按照频率，把相同频率的word放在一个TreeSet里**
+* 按照频率，把相同频率的word放在一个TreeSet里
 
-* **易错点：如果Map&lt;String, Integer&gt;需要修改value的时候需要用map.put\(key, map.get\(key\) + 1\)的方法来实现；但是如果Map&lt;String, List&gt;需要修改value的时候直接map.get\(key\).add\(word\)即可。**
+* 易错点：如果Map&lt;String, Integer&gt;需要修改value的时候需要用map.put\(key, map.get\(key\) + 1\)的方法来实现；但是如果Map&lt;String, List&gt;需要修改value的时候直接map.get\(key\).add\(word\)即可。
 
 ```java
 // solution 1

@@ -11,19 +11,19 @@
 >
 > Given the array`[-2,2,-3,4,-1,2,1,-5,3]`and k1 =`2`, k2 =`4`, the contiguous subarray`[4,-1,2,1]`has the largest sum =`6`.
 
-**思想和Maximum Subarray IV类似但是限定了k1到k2范围。因为当循环遍历到比k2大的节点的时候，找minPrefix的范围是变化的 - 前面少一个数，后面多一个数。**
+思想和Maximum Subarray IV类似但是限定了k1到k2范围。因为当循环遍历到比k2大的节点的时候，找minPrefix的范围是变化的 - 前面少一个数，后面多一个数。
 
-**刚开始到每个节点的时候，子循环从 i - k2开始一直到 i - k1，用minPrefix变量去找最小值，复杂度太高，内存超了。**
+刚开始到每个节点的时候，子循环从 i - k2开始一直到 i - k1，用minPrefix变量去找最小值，复杂度太高，内存超了。
 
-**答案1：新的思想（单调队列），用一个linkedList来维护一个queue，每次 i 变化的时候**
+答案1：新的思想（单调队列），用一个linkedList来维护一个queue，每次 i 变化的时候
 
-* **当 k1 &lt;= i && i &lt;= k2的时候，将当前 i - k1加入进来，队列中从尾巴开始把所有大于当前 i - k1的元素用getLast（）删除掉，把 i - k1元素放进队尾，最小的元素在队头。**
+* 当 k1 &lt;= i && i &lt;= k2的时候，将当前 i - k1加入进来，队列中从尾巴开始把所有大于当前 i - k1的元素用getLast（）删除掉，把 i - k1元素放进队尾，最小的元素在队头。
 
-* **当 i &gt; k2的时候，除了上面的操作还要用getFirst\(\)裁剪掉 i - k2之前的元素， 从而保证了队列中的元素就是可以作为minPrefix的元素范围，并且最小的元素在队头。**
+* 当 i &gt; k2的时候，除了上面的操作还要用getFirst\(\)裁剪掉 i - k2之前的元素， 从而保证了队列中的元素就是可以作为minPrefix的元素范围，并且最小的元素在队头。
 
-  **相当于人肉构造PriorityQueue。**
+  相当于人肉构造PriorityQueue。
 
-**答案2：用PriorityQueue&lt;Pair&gt;，Pair有sum和index属性，当 i &gt;k2的时候，每次出列的元素要检查index是否小于 i - k1。**
+答案2：用PriorityQueue&lt;Pair&gt;，Pair有sum和index属性，当 i &gt;k2的时候，每次出列的元素要检查index是否小于 i - k1。
 
 ```java
 // Solution 1

@@ -14,12 +14,12 @@
 > 1 + 46 = 47  
 > 2 + 45 = 47
 
-1. **O\(nlogn\)时间：先排序，然后按照sorted array做。注意左右指针判断nums\[left\] == nums\[left - 1\] 和 nums\[right\] == nums\[right + 1\]**
-2. **O\(n\)时间 + O\(n\)空间：用HashMap记录每个元素出现的次数。遍历哈希表的keySet\(\)，**
+1. O\(nlogn\)时间：先排序，然后按照sorted array做。注意左右指针判断nums\[left\] == nums\[left - 1\] 和 nums\[right\] == nums\[right + 1\]
+2. O\(n\)时间 + O\(n\)空间：用HashMap记录每个元素出现的次数。遍历哈希表的keySet\(\)，
 
-   **如果target - key存在并且和key本身不相等，则记录，并且将当前key和target - key的出现次数都记录为0**
+   如果target - key存在并且和key本身不相等，则记录，并且将当前key和target - key的出现次数都记录为0
 
-   **如果target - key存在并且和key本身相等（注意这种特殊情况），则判断本身出现次数是否大于等于2次，如果是，则记录并且重置为0**
+   如果target - key存在并且和key本身相等（注意这种特殊情况），则判断本身出现次数是否大于等于2次，如果是，则记录并且重置为0
 
 ```java
 // Solution 1

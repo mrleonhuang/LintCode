@@ -7,15 +7,15 @@
 > Given`[3,10,1000,-99,4,100]`and_k_=`3`.  
 > Return`[1000, 100, 10]`.
 
-**1.Min Heap 最小堆： PriorityQueue，把数组里的数加入queue里，保持queue里有k个元素，最后剩下的数就是最大的k个数**
+1.Min Heap 最小堆： PriorityQueue，把数组里的数加入queue里，保持queue里有k个元素，最后剩下的数就是最大的k个数
 
-* **注意点1：PriorityQueue&lt;Integer&gt;默认是升序，如果需要降序，可以用**
+* 注意点1：PriorityQueue&lt;Integer&gt;默认是升序，如果需要降序，可以用
 
   ```java
   PriorityQueue<Integer>queue=newPriorityQueue<Integer>(size,Collections.reverseOrder());
   ```
 
-  **或者自定义Comparator**
+  或者自定义Comparator
 
 ```java
     PriorityQueue<Integer> queue = new PriorityQueue<Integer>(size,new Comparator<Integer>(){
@@ -27,13 +27,13 @@
     }
 ```
 
-* **注意点2：当queue里有k+1个数的时候poll最小的数出来，这样才是最大的k个数。并且注意poll和插入数的前后顺序。**
+* 注意点2：当queue里有k+1个数的时候poll最小的数出来，这样才是最大的k个数。并且注意poll和插入数的前后顺序。
 
-* **注意点3：输出顺序如果需要从大到小，则需要逆着放进最终结果数组里**
+* 注意点3：输出顺序如果需要从大到小，则需要逆着放进最终结果数组里
 
-**2.Max Heap最大堆：PriorityQueue装进所有元素，导出最大的k个**
+2.Max Heap最大堆：PriorityQueue装进所有元素，导出最大的k个
 
-**3. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k**
+3. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k
 
 ```java
 // solution 1
