@@ -70,6 +70,7 @@
   * [Kth Smallest Numbers in Unsorted Array](two-pointers/kth-smallest-numbers-in-unsorted-array.md)
   * [Triangle Count](two-pointers/triangle-count.md)
   * [3Sum](two-pointers/3sum.md)
+  * [4Sum](two-pointers/4sum.md)
 * [Data Structure](data-structure.md)
   * [High Five](data-structure/high-five.md)
   * [K Closest Points](data-structure/k-closest-points.md)
