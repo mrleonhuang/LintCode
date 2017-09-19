@@ -71,6 +71,7 @@
   * [Triangle Count](two-pointers/triangle-count.md)
   * [3Sum](two-pointers/3sum.md)
   * [4Sum](two-pointers/4sum.md)
+  * [4Sum II](two-pointers/4sum-ii.md)
 * [Data Structure](data-structure.md)
   * [High Five](data-structure/high-five.md)
   * [K Closest Points](data-structure/k-closest-points.md)
