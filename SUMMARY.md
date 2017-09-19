@@ -22,6 +22,7 @@
   * [First Position of Target](binary-search/first-position-of-target.md)
   * [Two Sum II - Input array is sorted](binary-search/two-sum-ii-input-array-is-sorted.md)
   * [Valid Perfect Square](binary-search/valid-perfect-square.md)
+  * [Find the Duplicate Number](binary-search/find-the-duplicate-number.md)
 * [Binary Tree & Divide Conquer](binary-tree-and-divide-conquer.md)
   * [Subtree with Maximum Average](binary-tree-and-divide-conquer/subtree-with-maximum-average.md)
   * [Minimum Subtree](binary-tree-and-divide-conquer/minimum-subtree.md)
