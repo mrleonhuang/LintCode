@@ -125,14 +125,14 @@ class Solution {
  */
 class Solution {
     private int count;
-    
+
     public int pathSum(TreeNode root, int sum) {
         this.count = 0;
         List<Integer> buffer = new ArrayList<Integer>();
         dfs(root, buffer, sum);
         return this.count;
     }
-    
+
     private void dfs(TreeNode root, List<Integer> buffer, int sum) {
         if (root == null) {
             return;
