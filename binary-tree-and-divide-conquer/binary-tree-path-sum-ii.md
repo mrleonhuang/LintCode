@@ -94,7 +94,7 @@ class Solution {
         dfs(root, buffer, sum, count);
         return count;
     }
-    
+
     private void dfs(TreeNode root, List<Integer> buffer, int sum, int count) {
         if (root == null) {
             return;
@@ -109,6 +109,44 @@ class Solution {
         }
         dfs(root.left, buffer, sum, count);
         dfs(root.right, buffer, sum, count);
+        buffer.remove(buffer.size() - 1);
+    }
+}
+
+// CORRECT CODE !!!
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    private int count;
+    
+    public int pathSum(TreeNode root, int sum) {
+        this.count = 0;
+        List<Integer> buffer = new ArrayList<Integer>();
+        dfs(root, buffer, sum);
+        return this.count;
+    }
+    
+    private void dfs(TreeNode root, List<Integer> buffer, int sum) {
+        if (root == null) {
+            return;
+        }
+        buffer.add(root.val);
+        int target = sum;
+        for (int i = buffer.size() - 1; i >= 0; i--) {
+            target -= buffer.get(i);
+            if (target == 0) {
+                this.count++;
+            }
+        }
+        dfs(root.left, buffer, sum);
+        dfs(root.right, buffer, sum);
         buffer.remove(buffer.size() - 1);
     }
 }
