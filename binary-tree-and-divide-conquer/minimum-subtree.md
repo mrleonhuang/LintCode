@@ -114,8 +114,8 @@ public class Solution {
         int right = getSum(node.right);
         int curtSum = left + right + node.val;
         if(curtSum < minSum) {
-            minSubtree = node;
-            minSum = curtSum;
+            this.minSubtree = node;
+            this.minSum = curtSum;
         }
         return curtSum;
     }
