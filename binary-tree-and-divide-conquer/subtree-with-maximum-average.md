@@ -21,6 +21,8 @@
 >
 > return the node`11`.
 
+平均值随着sum和count的变化而变化，所以要同时记录sum和count以便于后续比较。
+
 ```java
 /**
  * Definition of TreeNode:
