@@ -21,6 +21,8 @@
 >
 > return the node`1`.
 
+两种solution区别为记录截止到每一层的最小树的方式不同：第一种方法为用返回值变量带着走，第二种方法用class的变量记录。
+
 ```java
 // solution 1
 /**
