@@ -58,30 +58,24 @@ public class Solution {
     }
 
     public ResultType helper(TreeNode node) {
-
         if (node == null) {
             return new ResultType(null, Integer.MAX_VALUE, 0);
         }
-
         ResultType leftResult = helper(node.left);
         ResultType rightResult = helper(node.right);
-
         ResultType result = new ResultType(
             node,
             leftResult.sum + rightResult.sum + node.val,
             leftResult.sum + rightResult.sum + node.val
         );
-
         if (leftResult.minSum < result.minSum) {
             result.minSum = leftResult.minSum;
             result.minSubtree = leftResult.minSubtree;
         }
-
         if (rightResult.minSum < result.minSum) {
             result.minSum = rightResult.minSum;
             result.minSubtree = rightResult.minSubtree;
         }
-
         return result;
     }
 }
@@ -112,19 +106,18 @@ public class Solution {
         return minSubtree;
     }
 
-    private int getSum(TreeNode node)
-    {
-        if(node == null) return 0;
-
-        int sum = getSum(node.left) + getSum(node.right) + node.val;
-
-        if(sum < minSum)
-        {
-            minSubtree = node;
-            minSum = sum;
+    private int getSum(TreeNode node){
+        if(node == null) {
+            return 0;
         }
-
-        return sum;
+        int left = getSum(node.left);
+        int right = getSum(node.right);
+        int curtSum = left + right + node.val;
+        if(curtSum < minSum) {
+            minSubtree = node;
+            minSum = curtSum;
+        }
+        return curtSum;
     }
 }
 ```
