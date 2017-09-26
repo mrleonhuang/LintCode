@@ -74,5 +74,45 @@ public class Solution {
 }
 ```
 
+同样的题在LeetCode中437. Path Sum III 求的是个数，犯了严重错误，count在DFS中不能携带着来计数！！在这个例子中，count只能从某个节点往下延续，而不能延续到同层的其他节点中。
+
+```java
+// WRONG CODE !!!
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public int pathSum(TreeNode root, int sum) {
+        int count = 0;
+        List<Integer> buffer = new ArrayList<Integer>();
+        dfs(root, buffer, sum, count);
+        return count;
+    }
+    
+    private void dfs(TreeNode root, List<Integer> buffer, int sum, int count) {
+        if (root == null) {
+            return;
+        }
+        buffer.add(root.val);
+        int target = sum;
+        for (int i = buffer.size() - 1; i >= 0; i--) {
+            target -= buffer.get(i);
+            if (target == 0) {
+                count++;
+            }
+        }
+        dfs(root.left, buffer, sum, count);
+        dfs(root.right, buffer, sum, count);
+        buffer.remove(buffer.size() - 1);
+    }
+}
+```
+
 
 
