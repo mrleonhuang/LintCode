@@ -40,9 +40,7 @@ class ResultType
 {
     int sum; 
     int count;
-
-    public ResultType(int sum, int count)
-    {
+    public ResultType(int sum, int count) {
         this.sum = sum;
         this.count = count;
     }
@@ -62,26 +60,19 @@ public class Solution {
         return maxSubtree;
     }
 
-    private ResultType helper(TreeNode node)
-    {
-        if(node == null)
-        {
+    private ResultType helper(TreeNode node) {
+        if(node == null) {
             return new ResultType(0, 0);
         }
-
         ResultType leftResult = helper(node.left);
         ResultType rightResult = helper(node.right);
-
         int sum = leftResult.sum + rightResult.sum + node.val;
         int count = leftResult.count + rightResult.count + 1;
         ResultType result = new ResultType(sum, count);
-
-        if(maxSubtree == null || maxResult.sum * count < sum * maxResult.count)
-        {
+        if(maxSubtree == null || maxResult.sum * count < sum * maxResult.count) {
            maxSubtree = node;
            maxResult = result;
         }
-
         return result;
     }
 }
