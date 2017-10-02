@@ -30,6 +30,10 @@
 >
 > return node`3`.
 
+第一个while循环是在利用BST的特性从原始节点（root of tree）去寻找p点所在的位置，基于中序遍历的特性，如果所找的p在左边，则用successor变量记录当前节点为左子树的后续节点。
+
+找到p点之后，根据中序遍历的特性，去寻找下一个节点所在位置：如果p有右子树则successor为右子树的左下角元素；如果p没有右子树则successor为上面所记载的successor。
+
 ```java
 /**
  * Definition for a binary tree node.
