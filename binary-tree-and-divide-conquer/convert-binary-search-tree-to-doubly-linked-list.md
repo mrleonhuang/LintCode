@@ -2,7 +2,7 @@
 
 > Convert a binary search tree to doubly linked list with in-order traversal.
 >
-> **xample**
+> **Example**
 >
 > Given a binary search tree:
 >

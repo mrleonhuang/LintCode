@@ -42,33 +42,26 @@
  */
 public class Solution {
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-
         TreeNode successor = null;
-
-        while(root != null && root.val != p.val){
-
-            if(p.val < root.val){
+        while(root != null && root.val != p.val) {
+            if (p.val < root.val) {
                 successor = root;
                 root = root.left;
             }
-
-            if(root.val < p.val){
+            if (root.val < p.val) {
                 root = root.right;
             }
         }
-
-        if(root == null)
+        if (root == null) {
             return null;
-
-        if(root.right == null)
+        }
+        if (root.right == null) {
             return successor;
-
+        }
         root = root.right;
-
-        while(root.left != null){
+        while (root.left != null) {
             root = root.left;
         }
-
         return root;
     }
 }
