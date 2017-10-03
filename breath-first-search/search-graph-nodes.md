@@ -57,14 +57,15 @@ public class Solution {
         Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
         queue.offer(node);
         set.add(node);
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty()) {
             UndirectedGraphNode currentNode = queue.poll();
-            if(values.get(currentNode) == target){
+            if(values.get(currentNode) == target) {
                 return currentNode;
             }
             for(UndirectedGraphNode neighbor : currentNode.neighbors){
-                if(!set.contains(neighbor)){
+                if(!set.contains(neighbor)) {
                    queue.offer(neighbor);
+                   set.add(neighbor);
                 }
             }
         }
