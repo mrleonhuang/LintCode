@@ -1,4 +1,4 @@
-# 448. Inorder Successor in Binary Search Tree \[LintCode\]
+## 448. Inorder Successor in Binary Search Tree \[LintCode\]
 
 > Given a binary search tree \([See Definition](http://www.lintcode.com/problem/validate-binary-search-tree/)\) and a node in it, find the in-order successor of that node in the BST.
 >

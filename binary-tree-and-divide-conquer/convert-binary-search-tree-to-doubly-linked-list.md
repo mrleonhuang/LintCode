@@ -1,4 +1,4 @@
-# 378. Convert Binary Search Tree to Doubly Linked List \[LintCode\]
+## 378. Convert Binary Search Tree to Doubly Linked List \[LintCode\]
 
 > Convert a binary search tree to doubly linked list with in-order traversal.
 >

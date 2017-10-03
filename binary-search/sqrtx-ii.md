@@ -1,4 +1,4 @@
-# 586. Sqrt\(x\) II \[LintCode\]
+## 586. Sqrt\(x\) II \[LintCode\]
 
 > Implement`double sqrt(double x)`and`x >= 0`.
 >

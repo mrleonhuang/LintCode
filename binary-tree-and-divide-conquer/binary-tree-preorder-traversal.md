@@ -1,10 +1,9 @@
-# 144. Binary Tree Preorder Traversal
+## 144. Binary Tree Preorder Traversal
 
 > Given a binary tree, return thepreordertraversal of its nodes' values.
 >
 > For example:  
-> Given binary tree`{1,#,2,3}`,  
->
+> Given binary tree`{1,#,2,3}`,
 >
 > ```
 >    1
@@ -12,7 +11,6 @@
 >      2
 >     /
 >    3
->
 > ```
 >
 > return`[1,2,3]`.
@@ -34,7 +32,7 @@ class Solution {
         helper(root, results);
         return results;
     }
-    
+
     private void helper(TreeNode root, List<Integer> results) {
         if (root == null) {
             return;

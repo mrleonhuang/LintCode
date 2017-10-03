@@ -1,4 +1,4 @@
-# 350. Intersection of Two Arrays II \[LeetCode\]
+## 350. Intersection of Two Arrays II \[LeetCode\]
 
 > Given two arrays, write a function to compute their intersection.
 >
@@ -18,8 +18,6 @@
 
 1. 对比前一题solution1，本题要记录重复个数，所以需要HashMap + List的数据结构
 2. 对比前一题solution2， 本题不用判断重复即可
-
-
 
 * 如果一个大数组和一个小数组，则采用大数组里二分搜索小数组里的数！
 

@@ -1,4 +1,4 @@
-# 129. Sum Root to Leaf Numbers \[LeetCode\]
+## 129. Sum Root to Leaf Numbers \[LeetCode\]
 
 > Given a binary tree containing digits from`0-9`only, each root-to-leaf path could represent a number.
 >
@@ -12,7 +12,6 @@
 >     1
 >    / \
 >   2   3
->
 > ```
 >
 > The root-to-leaf path`1->2`represents the number`12`.  
@@ -50,7 +49,7 @@ class Solution {
         }
         return sum;
     }
-    
+
     private void dfs(TreeNode node, List<Integer> path, List<List<Integer>> paths) {
         if (node == null) {
             return;
@@ -82,7 +81,7 @@ class Solution {
     public int sumNumbers(TreeNode root) {
         return getSum(root, 0);
     }
-    
+
     private int getSum(TreeNode node, int sum) {
         if (node == null) {
             return 0;

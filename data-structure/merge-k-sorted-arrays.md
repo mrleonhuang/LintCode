@@ -1,4 +1,4 @@
-# 486. Merge k Sorted Arrays \[LintCode\]
+## 486. Merge k Sorted Arrays \[LintCode\]
 
 > Given \_k \_sorted integer arrays, merge them into one sorted array.
 >

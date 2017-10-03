@@ -1,4 +1,4 @@
-# 376. Binary Tree Path Sum \[LintCode\]
+## 376. Binary Tree Path Sum \[LintCode\]
 
 > Given a binary tree, find all paths that sum of the nodes in the path equals to a given number`target`.
 >

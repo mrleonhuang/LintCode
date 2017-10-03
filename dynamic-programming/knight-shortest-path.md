@@ -1,4 +1,4 @@
-# 611. Knight Shortest Path \[LintCode\]
+## 611. Knight Shortest Path \[LintCode\]
 
 > Given a knight in a chessboard \(a binary matrix with `0`as empty a `1`as barrier\) with a `source`position, find the shortest path to a `destination`position, return the length of the route.
 >

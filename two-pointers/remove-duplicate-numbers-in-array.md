@@ -1,4 +1,4 @@
-# 521. Remove Duplicate Numbers in Array \[LintCode\]
+## 521. Remove Duplicate Numbers in Array \[LintCode\]
 
 > Given an array of integers, remove the duplicate numbers in it.
 >

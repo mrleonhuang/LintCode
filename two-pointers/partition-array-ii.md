@@ -1,4 +1,4 @@
-# 625. Partition Array II \[LintCode\]
+## 625. Partition Array II \[LintCode\]
 
 > Partition an unsorted integer array into three parts:
 >

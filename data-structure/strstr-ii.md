@@ -1,4 +1,4 @@
-# 594. strStr II \[LintCode\]
+## 594. strStr II \[LintCode\]
 
 > Implement`strStr`function in O\(n + m\) time.
 >

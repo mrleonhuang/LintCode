@@ -1,4 +1,4 @@
-# 494. Implement Stack by Two Queues \[LintCode\]
+## 494. Implement Stack by Two Queues \[LintCode\]
 
 > Implement a stack by two queues. The queue is first in first out \(FIFO\). That means you can not directly pop the last element in a queue.
 >

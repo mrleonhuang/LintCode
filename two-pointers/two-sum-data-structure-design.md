@@ -1,4 +1,4 @@
-# 607. Two Sum - Data structure design \[LintCode\]
+## 607. Two Sum - Data structure design \[LintCode\]
 
 > Design and implement a TwoSum class. It should support the following operations:`add`and`find`.
 >

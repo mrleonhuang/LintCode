@@ -1,4 +1,4 @@
-# 28. Search a 2D Matrix \[LintCode\]
+## 28. Search a 2D Matrix \[LintCode\]
 
 > Write an efficient algorithm that searches for a value in an\_m\_x\_n\_matrix.
 >

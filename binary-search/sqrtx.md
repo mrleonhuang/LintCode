@@ -1,4 +1,4 @@
-# 141. Sqrt\(x\) \[LintCode\]
+## 141. Sqrt\(x\) \[LintCode\]
 
 > Implement int`sqrt(int x)`.
 >

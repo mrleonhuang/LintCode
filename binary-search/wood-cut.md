@@ -1,4 +1,4 @@
-# 183. Wood Cut
+## 183. Wood Cut
 
 > Given n pieces of wood with length`L[i]`\(integer array\). Cut them into small pieces to guarantee you could have equal or more than k pieces with the same length. What is the longest length you can get from the n pieces of wood? Given L & k, return the maximum length of the small pieces.
 >
@@ -6,7 +6,7 @@
 >
 > You couldn't cut wood into float length.
 >
-> If you couldn't get &gt;=_k _pieces, return`0`.
+> If you couldn't get &gt;=\_k \_pieces, return`0`.
 >
 > **Example**
 >
@@ -49,7 +49,7 @@ public class Solution {
         }
         return 0;
     }
-    
+
     private int getPieces(int[] L, int length) {
         int pieces = 0;
         for (int i = 0; i < L.length; i++) {

@@ -1,4 +1,4 @@
-# 367. Perfect Valid Square \[LeetCode\]
+## 367. Perfect Valid Square \[LeetCode\]
 
 > Given a positive integernum, write a function which returns True ifnumis a perfect square else False.
 >

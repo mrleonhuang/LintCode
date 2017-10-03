@@ -1,4 +1,4 @@
-# 619. Binary Tree Longest Consecutive Sequence III \[LintCode\]
+## 619. Binary Tree Longest Consecutive Sequence III \[LintCode\]
 
 > It's follow up problem for[`Binary Tree Longest Consecutive Sequence II`](http://www.lintcode.com/en/problem/binary-tree-longest-consecutive-sequence-ii/)
 >

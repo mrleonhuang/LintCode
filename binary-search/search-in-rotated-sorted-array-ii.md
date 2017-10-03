@@ -1,4 +1,4 @@
-# 63. Search in Rotated Sorted Array II \[LintCode\]
+## 63. Search in Rotated Sorted Array II \[LintCode\]
 
 > Follow up for[Search in Rotated Sorted Array](http://www.lintcode.com/problem/search-in-rotated-sorted-array/):
 >

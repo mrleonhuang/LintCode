@@ -1,4 +1,4 @@
-# 599. Insert Into a Cyclic Sorted List \[LintCode\]
+## 599. Insert Into a Cyclic Sorted List \[LintCode\]
 
 > Given a node from a cyclic linked list which has been sorted, write a function to insert a value into the list such that it remains a cyclic sorted list. The given node can be any single node in the list. Return the inserted new node.
 >

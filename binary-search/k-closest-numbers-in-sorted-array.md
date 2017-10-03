@@ -1,4 +1,4 @@
-# 460. K Closest Numbers In Sorted Array \[LintCode\]
+## 460. K Closest Numbers In Sorted Array \[LintCode\]
 
 > Given a target number, a non-negative integer `k`and an integer array A sorted in ascending order, find the k closest numbers to target in A, sorted in ascending order by the difference between the number and target. Otherwise, sorted in ascending order by number if the difference is same.
 >

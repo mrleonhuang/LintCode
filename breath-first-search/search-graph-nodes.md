@@ -1,4 +1,4 @@
-# 618. Search Graph Nodes \[LintCode\]
+## 618. Search Graph Nodes \[LintCode\]
 
 > Given a`undirected graph`, a`node`and a`target`, return the nearest node to given node which value of it is target, return`NULL`if you can't find.
 >

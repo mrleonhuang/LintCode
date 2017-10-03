@@ -1,4 +1,4 @@
-# 540. Zigzag Iterator \[LintCode\]
+## 540. Zigzag Iterator \[LintCode\]
 
 > Given two **1d **vectors, implement an iterator to return their elements alternately.
 >

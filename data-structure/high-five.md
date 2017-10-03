@@ -1,4 +1,4 @@
-# 613. High Five \[LintCode\]
+## 613. High Five \[LintCode\]
 
 > There are two properties in the node student
 >

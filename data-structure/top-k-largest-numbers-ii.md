@@ -1,4 +1,4 @@
-# 545. Top k Largest Numbers II \[LintCode\]
+## 545. Top k Largest Numbers II \[LintCode\]
 
 > Implement a data structure, provide two interfaces:
 >

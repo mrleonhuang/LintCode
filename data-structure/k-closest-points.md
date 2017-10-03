@@ -1,4 +1,4 @@
-# 612. K Closest Points \[LintCode\]
+## 612. K Closest Points \[LintCode\]
 
 > Given some
 >

@@ -1,4 +1,4 @@
-# 614. Binary Tree Longest Consecutive Sequence II \[LintCode\]
+## 614. Binary Tree Longest Consecutive Sequence II \[LintCode\]
 
 > Given a binary tree, find the length of the longest consecutive sequence path.
 >

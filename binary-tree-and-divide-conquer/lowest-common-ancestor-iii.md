@@ -1,4 +1,4 @@
-# 578. Lowest Common Ancestor III \[LintCode\]
+## 578. Lowest Common Ancestor III \[LintCode\]
 
 > Given the root and two nodes in a Binary Tree. Find the lowest common ancestor\(LCA\) of the two nodes.
 >

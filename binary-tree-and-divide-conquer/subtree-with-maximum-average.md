@@ -1,4 +1,4 @@
-# 597. Subtree with Maximum Average \[LintCode\]
+## 597. Subtree with Maximum Average \[LintCode\]
 
 > Given a binary tree, find the subtree with maximum average. Return the root of the subtree.
 >

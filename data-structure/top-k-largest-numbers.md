@@ -1,4 +1,4 @@
-# 544. Top k Largest Numbers \[LintCode\]
+## 544. Top k Largest Numbers \[LintCode\]
 
 > Given an integer array, find the top \_k \_largest numbers in it.
 >
@@ -33,7 +33,7 @@
 
 2.Max Heap最大堆：PriorityQueue装进所有元素，导出最大的k个
 
-3. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k
+1. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k
 
 ```java
 // solution 1

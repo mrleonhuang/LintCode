@@ -1,4 +1,4 @@
-# 254. Drop Eggs \[LintCode\]
+## 254. Drop Eggs \[LintCode\]
 
 > There is a building of`n`floors. If an egg drops from the\_k\_th floor or above, it will break. If it's dropped from any floor below, it will not break.
 >

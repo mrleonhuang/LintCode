@@ -1,4 +1,4 @@
-# 541. Zigzag Iterator II \[LintCode\]
+## 541. Zigzag Iterator II \[LintCode\]
 
 > Follow up [Zigzag Iterator](http://www.lintcode.com/en/problem/zigzag-iterator/) : What if you are given `k`1d vectors? How well can your code be extended to such cases? The "Zigzag" order is not clearly defined and is ambiguous for`k > 2`cases. If "Zigzag" does not look right to you, replace "Zigzag" with "Cyclic".
 >

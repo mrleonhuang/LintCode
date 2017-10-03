@@ -1,4 +1,4 @@
-# 595. Binary Tree Longest Consecutive Sequence \[LintCode\]
+## 595. Binary Tree Longest Consecutive Sequence \[LintCode\]
 
 > Given a binary tree, find the length of the longest consecutive sequence path.
 >
@@ -110,7 +110,7 @@ class Solution {
         helper(root, buffer);
         return this.maxCount;
     }
-    
+
     private void helper(TreeNode node, List<Integer> buffer) {
         if (node == null) {
             return;

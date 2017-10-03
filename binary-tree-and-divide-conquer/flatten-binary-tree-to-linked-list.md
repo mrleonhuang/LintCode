@@ -1,4 +1,4 @@
-# 114. Flatten Binary Tree to Linked List
+## 114. Flatten Binary Tree to Linked List
 
 > Given a binary tree, flatten it to a linked list in-place.
 >
@@ -11,11 +11,10 @@
 >        2   5
 >       / \   \
 >      3   4   6
->
 > ```
 >
 > The flattened tree should look like:
-
+>
 > ```
 >    1
 >     \
@@ -27,7 +26,7 @@
 >           \
 >            5
 >             \
->              6             
+>              6
 > ```
 
 solution 1 只用返回左子树和右子树的last节点而不用返回它们的first节点，因为两个子树的first节点可以用root.left和root.right直接访问到。
@@ -44,13 +43,13 @@ solution 2中因为在flatten左子树的时候会改变root.right的值，所�
  *     TreeNode(int x) { val = x; }
  * }
  */
- 
+
 // solution 1 : Divide & Conquer
 class Solution {
     public void flatten(TreeNode root) {
          helper(root);
     }
-    
+
     private TreeNode helper(TreeNode root) {
         if (root == null) {
             return null;

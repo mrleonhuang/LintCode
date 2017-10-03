@@ -1,4 +1,4 @@
-# 349. Intersection of Two Arrays \[LeetCode\]
+## 349. Intersection of Two Arrays \[LeetCode\]
 
 > Given two arrays, write a function to compute their intersection.
 >
@@ -13,8 +13,6 @@
 1. 用两个HashSet，第二个HashSet用来去重 O\(m + n\) 
 2. Sort 2 Arrays + Two Pointers O\(nlogn + mlogm + m + n\)
 3. Sort 1 Array + Binary Search O\(nlogn + mlogn\)
-
-
 
 * 注意开结果数组的长度为确定的intersection的长度，而不是nums1或者nums2或者temp的长度，因为多余的长度会被默认值0填充！
 

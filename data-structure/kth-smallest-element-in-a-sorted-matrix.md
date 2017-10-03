@@ -1,4 +1,4 @@
-# 378. Kth Smallest Element in a Sorted Matrix \[LeetCode\]
+## 378. Kth Smallest Element in a Sorted Matrix \[LeetCode\]
 
 > Given anxnmatrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
 >
@@ -23,8 +23,9 @@
 1. Heap + BFS：找第k个数首先想到用Heap，图想到BFS，PriorityQueue刚好满足这两个条件。注意用boolean数组去重。
 2. 二分搜索：二分搜索中左右坐标的移动不好判断，但是得到启发：
 
-* 可以用二分搜索找mid的方式来找第k个数
-* check函数提供了这种特定overlap matrix中判断某个数排名的方法（走对角线并统计），中心思想是一个数左上角的所有数肯定都比它小，但是它的右上角也有可能有数字比它小。类似题有Search in 2D Matrix II
+3. 可以用二分搜索找mid的方式来找第k个数
+
+4. check函数提供了这种特定overlap matrix中判断某个数排名的方法（走对角线并统计），中心思想是一个数左上角的所有数肯定都比它小，但是它的右上角也有可能有数字比它小。类似题有Search in 2D Matrix II
 
 ```java
 // solution 1

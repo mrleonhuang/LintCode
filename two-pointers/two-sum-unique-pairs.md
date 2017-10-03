@@ -1,4 +1,4 @@
-# 587. Two Sum - Unique pairs \[LintCode\]
+## 587. Two Sum - Unique pairs \[LintCode\]
 
 > Given an array of integers, find how many
 >

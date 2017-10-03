@@ -1,4 +1,4 @@
-# 471. Top K Frequent Words \[LintCode\]
+## 471. Top K Frequent Words \[LintCode\]
 
 > Given a list of words and an integer k, return the top k frequent words in the list.
 >

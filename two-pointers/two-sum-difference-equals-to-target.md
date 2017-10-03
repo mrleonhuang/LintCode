@@ -1,4 +1,4 @@
-# 610. Two Sum - Difference equals to target \[LintCode\]
+## 610. Two Sum - Difference equals to target \[LintCode\]
 
 > Given an array of integers, find two numbers that their
 >

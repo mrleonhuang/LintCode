@@ -1,4 +1,4 @@
-# 475. Binary Tree Maximum Path Sum II \[LintCode\]
+## 475. Binary Tree Maximum Path Sum II \[LintCode\]
 
 > Given a binary tree, find the maximum path sum from root.
 >

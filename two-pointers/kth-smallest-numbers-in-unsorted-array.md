@@ -1,4 +1,4 @@
-# 461. Kth Smallest Numbers in Unsorted Array \[LintCode\]
+## 461. Kth Smallest Numbers in Unsorted Array \[LintCode\]
 
 > Find the kth smallest numbers in an unsorted integer array.
 >

@@ -1,4 +1,4 @@
-# 604. Window Sum \[LintCode\]
+## 604. Window Sum \[LintCode\]
 
 > Given an array of n integer, and a moving window\(size k\), move the window at each iteration from the start of the array, find the `sum`of the element inside the window at each moving.
 >

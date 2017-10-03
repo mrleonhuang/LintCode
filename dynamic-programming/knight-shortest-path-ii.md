@@ -1,4 +1,4 @@
-# 630. Knight Shortest Path II \[LintCode\]
+## 630. Knight Shortest Path II \[LintCode\]
 
 > Given a knight in a chessboard `n * m`\(a binary matrix with 0 as empty and 1 as barrier\). the knight initialze position is`(0, 0)`and he wants to reach position`(n - 1, m - 1)`, Knight can only be from left to right. Find the shortest path to the destination position, return the length of the route. Return`-1`if knight can not reached.
 >

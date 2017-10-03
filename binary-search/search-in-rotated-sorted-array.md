@@ -1,4 +1,4 @@
-# 62. Search in Rotated Sorted Array \[LintCode\]
+## 62. Search in Rotated Sorted Array \[LintCode\]
 
 > Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 >

@@ -1,4 +1,4 @@
-# 573. Build Post Office II \[LintCode\]
+## 573. Build Post Office II \[LintCode\]
 
 > Given a 2D grid, each cell is either a wall`2`, an house`1`or empty`0`\(the number zero, one, two\), find a place to build a post office so that the sum of the distance from the post office to all the houses is smallest.
 >
