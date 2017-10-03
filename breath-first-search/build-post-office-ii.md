@@ -23,7 +23,7 @@
 
 distanceSum和visitedTimes数组记录每一个empty节点的信息。
 
-BFS是从每一个house出发，去搜索empty节点并且记录。
+因为不能跨越house，因此第一不能保证每个house都可以从每一个empty访问到；第二每一个empty节点到houses的距离和不能通过公式计算。所以BFS是从每一个house出发，去搜索每一个empty节点并记录每一个empty的情况。
 
 ```java
 class Coordinate{

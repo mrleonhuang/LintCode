@@ -19,6 +19,8 @@
 >
 > return `6`. \(Placing a post office at \(1,1\), the distance that post office to all the house sum is smallest.\)
 
+因为可以跨越house，所以第一每一个house一定可以从任意一个empty节点访问到；第二每一个empty节点到所有houses的距离和可以用公式计算。
+
 ```java
 class Coordinate{
     int x; 
