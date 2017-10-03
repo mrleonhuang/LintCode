@@ -42,6 +42,7 @@
   * [Binary Tree Preorder Traversal](binary-tree-and-divide-conquer/binary-tree-preorder-traversal.md)
   * [Binary Tree Inorder Traversal](binary-tree-and-divide-conquer/binary-tree-inorder-traversal.md)
   * [Flatten Binary Tree to Linked List](binary-tree-and-divide-conquer/flatten-binary-tree-to-linked-list.md)
+  * [Validate Binary Search Tree](binary-tree-and-divide-conquer/validate-binary-search-tree.md)
 * [BFS](breath-first-search.md)
   * [Search Graph Nodes](breath-first-search/search-graph-nodes.md)
   * [Zombie in Matrix ](breath-first-search/zombie-in-matrix.md)
