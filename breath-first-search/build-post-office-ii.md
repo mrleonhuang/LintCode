@@ -45,7 +45,6 @@ public class Solution {
     public int[] dirY = {1, -1, 0, 0};
 
     public int shortestDistance(int[][] grid) {
-
         if(grid == null || grid.length == 0 || grid[0].length == 0)
             return -1;
 
@@ -55,13 +54,13 @@ public class Solution {
         int[][] visitedTimes = new int[m][n];
 
         ArrayList<Coordinate> houses = getCoordinates(HOUSE);
-        for(Coordinate house : houses){
+        for (Coordinate house : houses) {
             bfs(house, distanceSum, visitedTimes);
         }
 
         int shortest = Integer.MAX_VALUE;
         ArrayList<Coordinate> empties = getCoordinates(EMPTY);
-        for(Coordinate empty : empties){
+        for (Coordinate empty : empties) {
             if(visitedTimes[empty.x][empty.y] != houses.size())
                 continue;
             shortest = Math.min(shortest, distanceSum[empty.x][empty.y]);
@@ -80,7 +79,6 @@ public class Solution {
     }
 
     private ArrayList<Coordinate> getCoordinates(int type){
-
         ArrayList<Coordinate> coordinates = new ArrayList();
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n; j++){
@@ -92,7 +90,7 @@ public class Solution {
         return coordinates;
     }
 
-    private void bfs(Coordinate start, int[][] distanceSum, int[][] visitedTimes){
+    private void bfs(Coordinate start, int[][] distanceSum, int[][] visitedTimes) {
 
         boolean[][] visited = new boolean[m][n];
         Queue<Coordinate> queue = new LinkedList<Coordinate>();

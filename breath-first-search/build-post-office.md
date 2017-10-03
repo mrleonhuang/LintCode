@@ -88,7 +88,7 @@ public class Solution {
                 }   
             }
         }
-        if(shortestPath < Integer.MAX_VALUE){
+        if (shortestPath < Integer.MAX_VALUE) {
             return shortestPath;
         }
         return -1;
