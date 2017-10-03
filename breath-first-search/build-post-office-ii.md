@@ -21,6 +21,10 @@
 >
 > return `8`, You can build at`(1,1)`. \(Placing a post office at \(1,1\), the distance that post office to all the house sum is smallest.\)
 
+distanceSum和visitedTimes数组记录每一个empty节点的信息。
+
+BFS是从每一个house出发，去搜索empty节点并且记录。
+
 ```java
 class Coordinate{
     int x, y;
