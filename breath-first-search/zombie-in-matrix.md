@@ -35,20 +35,16 @@ public class Solution {
 
     public int zombie(int[][] grid) {
         // Write your code here
-
-        if(grid == null || grid.length == 0 || grid[0].length == 0){
+        if (grid == null || grid.length == 0 || grid[0].length == 0) {
             return -1;
         }
-
         int[] dirX = new int[]{0, 0, 1, -1};
         int[] dirY = new int[]{1, -1, 0, 0};
-
         Queue<Coordinate> queue = new LinkedList<Coordinate>();
         int n = grid.length;
         int m = grid[0].length;
         int days = 0;
         int people = 0;
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (grid[i][j] == PEOPLE) {
