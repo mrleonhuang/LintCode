@@ -8,7 +8,7 @@
 
 * **InBound判断不要越界**
 
-* **boolean数组标记 / HashSet / HashMap标记防止重复**
+* **boolean数组标记 / HashSet / HashMap / 改动原数组（图）来标记防止重复**
 
 
 

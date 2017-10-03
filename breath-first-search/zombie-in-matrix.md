@@ -49,54 +49,47 @@ public class Solution {
         int days = 0;
         int people = 0;
 
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++){
-                if(grid[i][j] == PEOPLE){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == PEOPLE) {
                     people++;
-                }else if(grid[i][j] == ZOMBIE){
+                } else if (grid[i][j] == ZOMBIE) {
                     queue.offer(new Coordinate(i, j));
                 }
             }
         }
-
-        if(people == 0){
+        if(people == 0) {
             return 0;
         }
-
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             days++;
             int size = queue.size();
-            for(int i = 0; i < size; i++){
+            for (int i = 0; i < size; i++) {
                 Coordinate zombie = queue.poll();
-                for(int j = 0; j < 4; j++){
+                for (int j = 0; j < 4; j++) {
                     Coordinate neighbor = new Coordinate(zombie.x + dirX[j], zombie.y + dirY[j]);
-                    if(isPeople(grid, neighbor)){
+                    if (isPeople(grid, neighbor)) {
                         queue.offer(neighbor);
                         grid[neighbor.x][neighbor.y] = ZOMBIE;
                         people--;
-                        if(people == 0){
+                        if (people == 0) {
                             return days;
                         }
                     }
                 }
             }
         }
-
         return -1;
     }
 
-    private boolean isPeople(int[][] grid, Coordinate cor){
-
+    private boolean isPeople(int[][] grid, Coordinate cor) {
         int n = grid.length;
         int m = grid[0].length;
-
-        if(cor.x >= 0 && cor.x < n && cor.y >= 0 && cor.y < m && grid[cor.x][cor.y] == PEOPLE){
+        if (cor.x >= 0 && cor.x < n && cor.y >= 0 && cor.y < m && grid[cor.x][cor.y] == PEOPLE) {
             return true;
         }
-
         return false;
     }
-
 }
 ```
 
