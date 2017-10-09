@@ -56,6 +56,7 @@
   * [Build Post Office](breath-first-search/build-post-office.md)
   * [Number of Islands II](breath-first-search/number-of-islands-ii.md)
   * [Pacific Atlantic Water Flow](breath-first-search/pacific-atlantic-water-flow.md)
+  * [01 Matrix](breath-first-search/01-matrix.md)
 * [DFS](depth-first-search.md)
   * [String Permutation](depth-first-search/string-permutation.md)
   * [String Permutation II](depth-first-search/string-permutation-ii.md)

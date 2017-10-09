@@ -19,6 +19,7 @@
 2. 判断图为树：node == edge + 1 && all nodes are connected
 3. Pacific Atlantic Water Flow 和 Build Post Office II 类似！要知道是否能到达，从目的地反向往出发地进行BFS标记，使用的方法是分时mark（用来mark能否到达的数组是公用标记数组，但是去重的visited数组是每一次BFS单独开的）
 4. 需要boolean\[\]\[\]数组去重的时候注意是否写成int\[\]\[\] ！！
+5. 分时BFS耗费时间，有时会超时，比如01 Matrix
 
 
 
