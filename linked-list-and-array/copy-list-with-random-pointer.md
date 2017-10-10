@@ -7,7 +7,7 @@
 关键在于建立原节点和新节点的映射关系。
 
 1. 用HashMap建立映射关系。针对每一个节点，用dummy/tail节点来管理先后顺序（next），否则会导致while循环错乱；在每一次循环内部直接管理random的关系。
-2. 用链表本身建立映射关系。第一遍循环，建立拷贝节点并且链接在原节点之后；第二遍循环，将原节点的random值赋予拷贝节点；第三遍循环，将拷贝节点拆出来；
+2. 用链表本身建立映射关系。第一遍循环，建立拷贝节点并且链接在原节点之后；第二遍循环，将原节点的random值赋予拷贝节点；第三遍循环，将拷贝节点拆出来。
 
 ```java
 /**
@@ -18,7 +18,7 @@
  *     RandomListNode(int x) { this.label = x; }
  * };
  */
- 
+
 // HashMap
 public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
