@@ -66,6 +66,7 @@
   * [Maximum Subarray V](linked-list-and-array/maximum-subarray-v.md)
   * [Intersection of Two Arrays](linked-list-and-array/intersection-of-two-arrays.md)
   * [Intersection of Two Arrays II](linked-list-and-array/intersection-of-two-arrays-ii.md)
+  * [Copy List with Random Pointer](linked-list-and-array/copy-list-with-random-pointer.md)
 * [Two Pointers](two-pointers.md)
   * [Two Sum - Data structure design](two-pointers/two-sum-data-structure-design.md)
   * [Two Sum - Less than or equal to target ](two-pointers/two-sum-less-than-or-equal-to-target.md)
