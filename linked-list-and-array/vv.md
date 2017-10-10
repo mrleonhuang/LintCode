@@ -13,6 +13,9 @@
 > `3->5->1`  
 > Return`5->1->3->4`
 
+1. 如果初始节点node为null，应该用node = new ListNode\(x\)并返回, 而不是创建并返回新的变量名。
+2. 循环list，判断node.val和node.next.val的关系，分小于、大于和等于三种情况考虑，每一种情况下如果x的值符合条件则插入。在等于情况下，如果循环回了start的位置，则说明list只有一个元素或者所有元素相同，则随便插入即可。
+
 ```java
 /**
  * Definition for ListNode
