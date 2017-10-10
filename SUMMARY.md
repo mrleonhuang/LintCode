@@ -71,6 +71,7 @@
   * [Reverse Linked List II](linked-list-and-array/reverse-linked-list-ii.md)
   * [Remove Nth Node From End of List](linked-list-and-array/remove-nth-node-from-end-of-list.md)
   * [Palindrome Linked List](linked-list-and-array/palindrome-linked-list.md)
+  * [Intersection of Two Linked Lists](linked-list-and-array/intersection-of-two-linked-lists.md)
 * [Two Pointers](two-pointers.md)
   * [Two Sum - Data structure design](two-pointers/two-sum-data-structure-design.md)
   * [Two Sum - Less than or equal to target ](two-pointers/two-sum-less-than-or-equal-to-target.md)
