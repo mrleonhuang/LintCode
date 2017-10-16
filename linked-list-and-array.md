@@ -19,12 +19,10 @@
 1. 涉及Reverse或者Delete节点导致head节点有可能被改变的题，需要预先引入dummy节点，例如_Reverse Linked List II_, _Remove Nth Node From End of List_
 2. 需要更改链表顺序的题目要check一下最后的尾巴是否已经封上（null），例如_Partition List_
 
-
-
 ### Array需要注意的问题
 
 1. 计算最大子集maximum subarray用当前prefixSum - minPrefixSum的方法获得
-2. prefixSum数组要比原数组大一位，第0位是0，公式为prefixSum\[i\] = prefixSum\[i - 1\] + nums\[i - 1\]
+2. prefixSum数组位数要比原数组大一位，第0位是0，之后递推公式为prefixSum\[i\] = prefixSum\[i - 1\] + nums\[i - 1\]
 
 
 
