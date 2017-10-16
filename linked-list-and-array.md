@@ -21,3 +21,10 @@
 
 
 
+### Array需要注意的问题
+
+1. 计算最大子集maximum subarray用当前prefixSum - minPrefixSum的方法获得
+2. prefixSum数组要比原数组大一位，第0位是0，公式为prefixSum\[i\] = prefixSum\[i - 1\] + nums\[i - 1\]
+
+
+
