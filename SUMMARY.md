@@ -77,6 +77,7 @@
   * [Best Time to Buy and Sell Stock](linked-list-and-array/best-time-to-buy-and-sell-stock.md)
   * [Best Time to Buy and Sell Stock II](linked-list-and-array/best-time-to-buy-and-sell-stock-ii.md)
   * [Best Time to Buy and Sell Stock III](linked-list-and-array/best-time-to-buy-and-sell-stock-iii.md)
+  * [Subarray Sum Equals K](linked-list-and-array/subarray-sum-equals-k.md)
 * [Two Pointers](two-pointers.md)
   * [Two Sum - Data structure design](two-pointers/two-sum-data-structure-design.md)
   * [Two Sum - Less than or equal to target ](two-pointers/two-sum-less-than-or-equal-to-target.md)
