@@ -1,10 +1,10 @@
 ## 544. Top k Largest Numbers \[LintCode\]
 
-> Given an integer array, find the top \_k \_largest numbers in it.
+> Given an integer array, find the top k largest numbers in it.
 >
 > **Example**
 >
-> Given`[3,10,1000,-99,4,100]`and_k_=`3`.  
+> Given`[3,10,1000,-99,4,100]`and _k_=`3`.  
 > Return`[1000, 100, 10]`.
 
 1.Min Heap 最小堆： PriorityQueue，把数组里的数加入queue里，保持queue里有k个元素，最后剩下的数就是最大的k个数
@@ -31,9 +31,9 @@
 
 * 注意点3：输出顺序如果需要从大到小，则需要逆着放进最终结果数组里
 
-2.Max Heap最大堆：PriorityQueue装进所有元素，导出最大的k个
+2. Max Heap最大堆：PriorityQueue装进所有元素，导出最大的k个
 
-1. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k
+3. Quick Sort 把最大的k个数quickSort到最前面，后面的数顺序不用管，递归出口为start &gt;= k
 
 ```java
 // solution 1

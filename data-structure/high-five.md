@@ -1,9 +1,7 @@
 ## 613. High Five \[LintCode\]
 
-> There are two properties in the node student
->
-> `id`and `scores`, to ensure that each student will have at least 5 points, find the average of 5 highest scores for each person.
->
+> There are two properties in the node student`id`and `scores`, to ensure that each student will have at least 5 points, find the average of 5 highest scores for each person.
+
 > **Example**
 >
 > ```
