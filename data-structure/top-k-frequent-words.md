@@ -104,8 +104,59 @@ public class Solution {
      Collections.reverse(Arrays.asList(array));
 ```
 
-```
+```java
+// solution 2
+class Pair {
+    String word;
+    int count;
+    public Pair(String word, int count) {
+        this.word = word;
+        this.count = count;
+    }
+}
 
+public class Solution {
+    /**
+     * @param words an array of string
+     * @param k an integer
+     * @return an array of string
+     */
+    public String[] topKFrequentWords(String[] words, int k) {
+        // Write your code here
+        if (words == null || words.length == 0 || words.length < k) {
+            return new String[0];
+        }
+        HashMap<String, Integer> counter = new HashMap<String, Integer>();
+        for (String word : words) {
+            if (counter.containsKey(word)) {
+                counter.put(word, counter.get(word) + 1);
+            } else {
+                counter.put(word, 1);
+            }
+        }
+        PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>(k + 1, new Comparator<Pair>(){
+            public int compare(Pair x, Pair y) {
+                if (x.count != y.count) {
+                    return x.count - y.count;
+                }
+                return y.word.compareTo(x.word);
+            }
+        });
+        for (Map.Entry<String, Integer> entry : counter.entrySet()) {
+            Pair newPair = new Pair(entry.getKey(), entry.getValue());
+            minHeap.offer(newPair);
+            if (minHeap.size() == k + 1) {
+                minHeap.poll();
+            }
+        }
+        String[] results = new String[k];
+        for (int i = 0; i < k; i++) {
+            results[i] = minHeap.poll().word;
+        }
+        Collections.reverse(Arrays.asList(results));
+        return results;
+    }
+}
 ```
 
 方法3： HashMap计数 + TreeMap + TreeSet
@@ -154,6 +205,50 @@ public class Solution {
             while (index < k && lastEntry != null && lastEntry.getValue().size() > 0) {
                 results[index] = lastEntry.getValue().pollFirst();
                 index++;
+            }
+        }
+        return results;
+    }
+}
+```
+
+方法4：方法3中的TreMap可以用数组代替，数组下标为频率。注意数组长度是words.length + 1，来保证极端情况所有words都一样。以数字区分的分类，比如Map&lt;Integer, Object&gt;，都可以考虑数组。
+
+```java
+public class Solution {
+    public List<String> topKFrequent(String[] words, int k) {
+        List<String> results = new ArrayList<String>();
+        if (words == null || words.length < k) {
+            return results;
+        }
+        Map<String, Integer> counter = new HashMap<String, Integer>();
+        for (String word : words) {
+            if (counter.containsKey(word)) {
+                counter.put(word, counter.get(word) + 1);
+            } else {
+                counter.put(word, 1);
+            }
+        }
+        TreeSet<String>[] buckets = new TreeSet[words.length + 1];
+        for (Map.Entry<String, Integer> entry : counter.entrySet()) {
+            String word = entry.getKey();
+            int freq = entry.getValue();
+            if (buckets[freq] == null) {
+                TreeSet<String> set = new TreeSet<String>();
+                buckets[freq] = set;
+            }
+            buckets[freq].add(word);
+        }
+        for (int i = buckets.length - 1; i > 0; i--) {
+            if (buckets[i] == null) {
+                continue;
+            }
+            TreeSet<String> set = buckets[i];
+            while (!set.isEmpty()) {
+                results.add(set.pollFirst());
+                if (results.size() == k) {
+                    return results;
+                }
             }
         }
         return results;
