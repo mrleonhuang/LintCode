@@ -43,22 +43,6 @@
 
 * 遍历Map的Entry的时候用Map.Entry&lt;String, Integer&gt;
 
-方法2：HashMap计数 + minHeap排序
-
-* Comparator需要改变顺序
-
-* Reverse Array:
-
-```java
-     Collections.reverse(Arrays.asList(array));
-```
-
-方法3： HashMap计数 + TreeMap + TreeSet
-
-* 按照频率，把相同频率的word放在一个TreeSet里
-
-* 易错点：如果Map&lt;String, Integer&gt;需要修改value的时候需要用map.put\(key, map.get\(key\) + 1\)的方法来实现；但是如果Map&lt;String, List&gt;需要修改value的时候直接map.get\(key\).add\(word\)即可。
-
 ```java
 // solution 1
 class Pair {
@@ -108,59 +92,32 @@ public class Solution {
         return results;
     }
 }
+```
 
-// solution 2
-class Pair {
-    String word;
-    int count;
-    public Pair(String word, int count) {
-        this.word = word;
-        this.count = count;
-    }
-}
+方法2：HashMap计数 + minHeap排序
 
-public class Solution {
-    /**
-     * @param words an array of string
-     * @param k an integer
-     * @return an array of string
-     */
-    public String[] topKFrequentWords(String[] words, int k) {
-        // Write your code here
-        if (words == null || words.length == 0 || words.length < k) {
-            return new String[0];
-        }
-        HashMap<String, Integer> counter = new HashMap<String, Integer>();
-        for (String word : words) {
-            if (counter.containsKey(word)) {
-                counter.put(word, counter.get(word) + 1);
-            } else {
-                counter.put(word, 1);
-            }
-        }
-        PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>(k + 1, new Comparator<Pair>(){
-            public int compare(Pair x, Pair y) {
-                if (x.count != y.count) {
-                    return x.count - y.count;
-                }
-                return y.word.compareTo(x.word);
-            }
-        });
-        for (Map.Entry<String, Integer> entry : counter.entrySet()) {
-            Pair newPair = new Pair(entry.getKey(), entry.getValue());
-            minHeap.offer(newPair);
-            if (minHeap.size() == k + 1) {
-                minHeap.poll();
-            }
-        }
-        String[] results = new String[k];
-        for (int i = 0; i < k; i++) {
-            results[i] = minHeap.poll().word;
-        }
-        Collections.reverse(Arrays.asList(results));
-        return results;
-    }
-}
+* Comparator需要改变顺序
+
+* Reverse Array:
+
+```java
+     Collections.reverse(Arrays.asList(array));
+```
+
+```java
+
+```
+
+方法3： HashMap计数 + TreeMap + TreeSet
+
+* 按照频率，把相同频率的word放在一个TreeSet里
+
+* 易错点：如果Map&lt;String, Integer&gt;需要修改value的时候需要用map.put\(key, map.get\(key\) + 1\)的方法来实现；但是如果Map&lt;String, List&gt;需要修改value的时候直接map.get\(key\).add\(word\)即可。
+
+```java
+
+
+
 
 // solution 3
 public class Solution {
