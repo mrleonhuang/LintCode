@@ -104,7 +104,7 @@ public class Solution {
      Collections.reverse(Arrays.asList(array));
 ```
 
-```java
+```
 
 ```
 
@@ -115,10 +115,6 @@ public class Solution {
 * 易错点：如果Map&lt;String, Integer&gt;需要修改value的时候需要用map.put\(key, map.get\(key\) + 1\)的方法来实现；但是如果Map&lt;String, List&gt;需要修改value的时候直接map.get\(key\).add\(word\)即可。
 
 ```java
-
-
-
-
 // solution 3
 public class Solution {
     /**
